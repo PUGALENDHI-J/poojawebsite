@@ -1133,6 +1133,17 @@ ul { list-style: none; }
   margin-bottom: 60px;
 }
 
+.footer-logo-studio {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
 .footer-brand .logo-text {
   font-family: var(--font-heading);
   font-size: 24px;
