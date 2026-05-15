@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Studio 361° Architects</title>
+  <meta name="description" content="Explore Studio 361° Architects' portfolio of luxury villas, modern homes, commercial spaces and precision interiors across South India." />
+  <meta name="keywords" content="architecture portfolio, interior design projects, luxury villas Salem, 3D visualization, Studio 361°" />
+  <meta property="og:title" content="Projects — Studio 361° Architects" />
+  <meta property="og:description" content="A curated portfolio of extraordinary spaces." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    /* ── Residence Dual-Image Slider ── */
+    .res-slider { position: relative; overflow: hidden; }
+    .res-slide-base { width: 100%; display: block; animation: res-base 8s ease-in-out infinite; }
+    .res-slide-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: res-overlay 8s ease-in-out infinite; }
+    @keyframes res-base    { 0%,5%{opacity:1} 30%,65%{opacity:0} 90%,100%{opacity:1} }
+    @keyframes res-overlay { 0%,5%{opacity:0} 30%,65%{opacity:1} 90%,100%{opacity:0} }
+    .masonry-item:hover .res-slide-base,
+    .masonry-item:hover .res-slide-overlay { filter: grayscale(0%) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Interactive Background -->
+  <div class="topo-interactive-bg"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar" data-nav-light="true">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-text">
+        <span class="nav-logo-studio">Studio</span>
+        <span class="nav-logo-main" style="color:var(--color-charcoal);">361° <span>Architects</span></span>
+      </div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html"    class="nav-link" style="color:var(--color-charcoal);">Home</a></li>
+      <li><a href="about.html"    class="nav-link" style="color:var(--color-charcoal);">About</a></li>
+      <li><a href="services.html" class="nav-link" style="color:var(--color-charcoal);">Services</a></li>
+      <li><a href="projects.html" class="nav-link active" style="color:var(--color-accent);">Projects</a></li>
+      <li><a href="contact.html"  class="nav-link" style="color:var(--color-charcoal);">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="about.html"    class="mobile-nav-link">About</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </nav>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('images/residence/1.ARUN NURA/ARUN NURA VIEW .jpg');"></div>
+    <div class="page-hero-topo"></div>
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Projects</span>
+      </div>
+      <h1 class="page-hero-title">Our <em>Portfolio</em></h1>
+    </div>
+  </section>
+
+  <!-- ═══ INTRO ═══ -->
+  <section class="section">
+    <div class="container-narrow text-center reveal">
+      <p class="section-label" style="justify-content:center;">Selected Works</p>
+      <h2 class="section-title">Spaces That <em>Speak</em></h2>
+      <div class="divider" style="margin:24px auto;"></div>
+      <p class="section-subtitle" style="margin:0 auto;max-width:620px;">
+        Each project in our portfolio represents a distinct narrative — a synthesis of client vision, site character and our design intelligence. Browse a selection of our most celebrated commissions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ PORTFOLIO FILTER + MASONRY ═══ -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+
+      <!-- Filter Buttons -->
+      <div class="portfolio-filter reveal" style="margin-bottom:60px;">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="residence">Residence</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+        <button class="filter-btn" data-filter="master-planning">Master Planning</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="masonry-grid">
+
+        <!-- Arun Nura -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/residence/1.ARUN NURA/ARUN NURA VIEW .jpg"
+             data-tag="Residence"
+             data-title="Arun Nura">
+          <img src="images/residence/1.ARUN NURA/ARUN NURA VIEW .jpg" alt="Arun Nura" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Arun Nura</h3>
+          </div>
+        </div>
+
+        <!-- Senthil Kumar -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/2.SENTHIL/6 7_6 - Photo.jpg"
+             data-tag="Residence"
+             data-title="Senthil Kumar">
+          <img src="images/residence/2.SENTHIL/6 7_6 - Photo.jpg" alt="Senthil Kumar" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Senthil Kumar</h3>
+          </div>
+        </div>
+
+        <!-- Ravichandran -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/3.RAVICHANDRAN/GREY_6 - Photo.jpg"
+             data-tag="Residence"
+             data-title="Ravichandran">
+          <img src="images/residence/3.RAVICHANDRAN/GREY_6 - Photo.jpg" alt="Ravichandran" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Ravichandran</h3>
+          </div>
+        </div>
+
+        <!-- ATK Karthick -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/4.ATK/5_1 - PhotoL.jpg"
+             data-tag="Residence"
+             data-title="ATK Karthick">
+          <img src="images/residence/4.ATK/5_1 - PhotoL.jpg" alt="ATK Karthick" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">ATK Karthick</h3>
+          </div>
+        </div>
+
+        <!-- Mr Karthick -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/5.KARTHICK KANNANKURICHI/5_4 - Photo.jpg"
+             data-tag="Residence"
+             data-title="Mr Karthick">
+          <img src="images/residence/5.KARTHICK KANNANKURICHI/5_4 - Photo.jpg" alt="Mr Karthick" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Mr Karthick</h3>
+          </div>
+        </div>
+
+        <!-- Mr John -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/6.JOHN/RE1_1 - Photo.jpg"
+             data-tag="Residence"
+             data-title="Mr John">
+          <img src="images/residence/6.JOHN/RE1_1 - Photo.jpg" alt="Mr John" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Mr John</h3>
+          </div>
+        </div>
+
+        <!-- Santhosh -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/7.SANTHOSH/1_3 - Photo.jpg"
+             data-tag="Residence"
+             data-title="Santhosh">
+          <img src="images/residence/7.SANTHOSH/1_3 - Photo.jpg" alt="Santhosh" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Santhosh</h3>
+          </div>
+        </div>
+
+        <!-- Farm House -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/residence/new/Farm House.jpeg"
+             data-tag="Residence"
+             data-title="Farm House">
+          <img src="images/residence/new/Farm House.jpeg" alt="Farm House" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Farm House</h3>
+          </div>
+        </div>
+
+        <!-- Jeeva -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/new/Jeeva.jpg"
+             data-tag="Residence"
+             data-title="Jeeva">
+          <img src="images/residence/new/Jeeva.jpg" alt="Jeeva" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Jeeva</h3>
+          </div>
+        </div>
+
+        <!-- Mayuri -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/residence/new/Mayuri.jpg"
+             data-tag="Residence"
+             data-title="Mayuri">
+          <img src="images/residence/new/Mayuri.jpg" alt="Mayuri" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Mayuri</h3>
+          </div>
+        </div>
+
+        <!-- Karthick -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/new/5.KARTHICK KANNANKURICHI/Karthick.jpg"
+             data-tag="Residence"
+             data-title="Karthick">
+          <img src="images/residence/new/5.KARTHICK KANNANKURICHI/Karthick.jpg" alt="Karthick" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Karthick</h3>
+          </div>
+        </div>
+
+        <!-- Harish -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/residence/new/8.HARISH OMALUR/31MARCH25-MR HARISH OMALUR -ELEVATION VIEWS_page-0002.jpg"
+             data-tag="Residence"
+             data-title="Harish">
+          <img src="images/residence/new/8.HARISH OMALUR/31MARCH25-MR HARISH OMALUR -ELEVATION VIEWS_page-0002.jpg" alt="Harish" loading="lazy" style="transform: scale(1.5); object-fit: cover;" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Harish</h3>
+          </div>
+        </div>
+
+        <!-- Vasanth -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/residence/new/9.VASANTH/II.jpg"
+             data-tag="Residence"
+             data-title="Vasanth">
+          <img src="images/residence/new/9.VASANTH/II.jpg" alt="Vasanth" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Vasanth</h3>
+          </div>
+        </div>
+
+        <!-- Anandh -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/residence/new/11.ANANDH SALEM/1_6 - Photo.jpg"
+             data-tag="Residence"
+             data-title="Anandh">
+          <img src="images/residence/new/11.ANANDH SALEM/1_6 - Photo.jpg" alt="Anandh" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Anandh</h3>
+          </div>
+        </div>
+
+        <!-- 5878 8   Photo -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/commercial/1.MANIMA/5878_8 - Photo.jpg"
+             data-tag="Commercial"
+             data-title="Manima Hospital">
+          <img src="images/commercial/1.MANIMA/5878_8 - Photo.jpg" alt="Manima Hospital" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Manima Hospital</h3>
+          </div>
+        </div>
+
+        <!-- 5878 9   Photo -->
+        <div class="masonry-item reveal-left"
+             data-category="commercial"
+             data-img="images/commercial/1.MANIMA/5878_9 - Photo.jpg"
+             data-tag="Commercial"
+             data-title="Manima Hospital">
+          <img src="images/commercial/1.MANIMA/5878_9 - Photo.jpg" alt="Manima Hospital" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Manima Hospital</h3>
+          </div>
+        </div>
+
+        <!-- Night 2 Op1 -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/commercial/2.KJS/NIGHT 2 OP1.jpg"
+             data-tag="Commercial"
+             data-title="KJS Jwellers">
+          <img src="images/commercial/2.KJS/NIGHT 2 OP1.jpg" alt="KJS Jwellers" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">KJS Jwellers</h3>
+          </div>
+        </div>
+
+        <!-- View 2 Op 1 -->
+        <div class="masonry-item reveal-left"
+             data-category="commercial"
+             data-img="images/commercial/2.KJS/VIEW 2 OP 1.jpg"
+             data-tag="Commercial"
+             data-title="KJS Jwellers">
+          <img src="images/commercial/2.KJS/VIEW 2 OP 1.jpg" alt="KJS Jwellers" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">KJS Jwellers</h3>
+          </div>
+        </div>
+
+        <!-- 1 3   Photo -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/commercial/3.MINI HALL/1_3 - Photo.jpg"
+             data-tag="Commercial"
+             data-title="Mini Hall">
+          <img src="images/commercial/3.MINI HALL/1_3 - Photo.jpg" alt="Mini Hall" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Mini Hall</h3>
+          </div>
+        </div>
+
+        <!-- 1 4   Photo -->
+        <div class="masonry-item reveal-left"
+             data-category="commercial"
+             data-img="images/commercial/3.MINI HALL/1_4 - Photo.jpg"
+             data-tag="Commercial"
+             data-title="Mini Hall">
+          <img src="images/commercial/3.MINI HALL/1_4 - Photo.jpg" alt="Mini Hall" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Mini Hall</h3>
+          </div>
+        </div>
+
+        <!-- Aruna Furnitures -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/commercial/4.ARUNA FURNITURES/view 1.jpg"
+             data-tag="Commercial"
+             data-title="Aruna Furnitures">
+          <img src="images/commercial/4.ARUNA FURNITURES/view 1.jpg" alt="Aruna Furnitures" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Aruna Furnitures</h3>
+          </div>
+        </div>
+
+        <!-- Aruna Furnitures -->
+        <div class="masonry-item reveal-left"
+             data-category="commercial"
+             data-img="images/commercial/4.ARUNA FURNITURES/view 3.jpg"
+             data-tag="Commercial"
+             data-title="Aruna Furnitures">
+          <img src="images/commercial/4.ARUNA FURNITURES/view 3.jpg" alt="Aruna Furnitures" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Aruna Furnitures</h3>
+          </div>
+        </div>
+
+        <!-- V1 Op2 3   Photo -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/commercial/6.BHARATHI -JKN/v1 op2_3 - Photo.jpg"
+             data-tag="Commercial"
+             data-title="Ortho Hospital">
+          <img src="images/commercial/6.BHARATHI -JKN/v1 op2_3 - Photo.jpg" alt="Ortho Hospital" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Ortho Hospital</h3>
+          </div>
+        </div>
+
+        <!-- V1 Op2 5   Photo -->
+        <div class="masonry-item reveal-left"
+             data-category="commercial"
+             data-img="images/commercial/6.BHARATHI -JKN/v1 op2_5 - Photo.jpg"
+             data-tag="Commercial"
+             data-title="Ortho Hospital">
+          <img src="images/commercial/6.BHARATHI -JKN/v1 op2_5 - Photo.jpg" alt="Ortho Hospital" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Ortho Hospital</h3>
+          </div>
+        </div>
+
+        <!-- 01 -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/commercial/7.DEV - HAVEN/01.jpg"
+             data-tag="Commercial"
+             data-title="DEV HAVEN">
+          <img src="images/commercial/7.DEV - HAVEN/01.jpg" alt="DEV HAVEN" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">DEV HAVEN</h3>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="masonry-item reveal-left"
+             data-category="commercial"
+             data-img="images/commercial/7.DEV - HAVEN/02.jpg"
+             data-tag="Commercial"
+             data-title="DEV HAVEN">
+          <img src="images/commercial/7.DEV - HAVEN/02.jpg" alt="DEV HAVEN" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">DEV HAVEN</h3>
+          </div>
+        </div>
+
+        <!-- Coffee Shop Kolli Hills -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/commercial/COFFEE SHOP KOLLI HILLS.jpg.jpeg"
+             data-tag="Commercial"
+             data-title="Coffee Shop Kolli Hills">
+          <img src="images/commercial/COFFEE SHOP KOLLI HILLS.jpg.jpeg" alt="Coffee Shop Kolli Hills" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Coffee Shop Kolli Hills</h3>
+          </div>
+        </div>
+
+        <!-- Mr Ganapathy Elevation -->
+        <div class="masonry-item reveal-left"
+             data-category="commercial"
+             data-img="images/commercial/MR GANAPATHY ELEVATION.jpg.jpeg"
+             data-tag="Commercial"
+             data-title="Mr Ganapathy">
+          <img src="images/commercial/MR GANAPATHY ELEVATION.jpg.jpeg" alt="Mr Ganapathy" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">Mr Ganapathy</h3>
+          </div>
+        </div>
+
+        <!-- JKM ORTHO HOSPITAL -->
+        <div class="masonry-item reveal-right"
+             data-category="commercial"
+             data-img="images/JKM ORTHO HOSPITAL.jpg.jpeg"
+             data-tag="Commercial"
+             data-title="JKM Ortho Hospital">
+          <img src="images/JKM ORTHO HOSPITAL.jpg.jpeg" alt="JKM Ortho Hospital" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-card-title">JKM Ortho Hospital</h3>
+          </div>
+        </div>
+
+        <!-- Coffee Shop Kolli Hills -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/new images/COFFEE SHOP KOLLI HILLS.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Coffee Shop Kolli Hills">
+          <img src="images/new images/COFFEE SHOP KOLLI HILLS.jpg.jpeg" alt="Coffee Shop Kolli Hills" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Coffee Shop Kolli Hills</h3>
+          </div>
+        </div>
+
+        <!-- Jagadeesh -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/new images/JAGADEESH.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Jagadeesh">
+          <img src="images/new images/JAGADEESH.jpg.jpeg" alt="Jagadeesh" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Jagadeesh</h3>
+          </div>
+        </div>
+
+        <!-- Kirubananth -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/new images/KIRUBANANTH.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Kirubananth">
+          <img src="images/new images/KIRUBANANTH.jpg.jpeg" alt="Kirubananth" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Kirubananth</h3>
+          </div>
+        </div>
+
+        <!-- Krishna Kumar -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/new images/KRISHNA KUMAR.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Krishna Kumar">
+          <img src="images/new images/KRISHNA KUMAR.jpg.jpeg" alt="Krishna Kumar" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Krishna Kumar</h3>
+          </div>
+        </div>
+
+
+        <!-- Mr Jude -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/new images/MR JUDE.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Mr Jude">
+          <img src="images/new images/MR JUDE.jpg.jpeg" alt="Mr Jude" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Mr Jude</h3>
+          </div>
+        </div>
+
+        <!-- Mr Lokesh -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/new images/MR LOKESH.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Mr Lokesh">
+          <img src="images/new images/MR LOKESH.jpg.jpeg" alt="Mr Lokesh" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Mr Lokesh</h3>
+          </div>
+        </div>
+
+        <!-- Rajesh -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/new images/RAJESH.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Rajesh">
+          <img src="images/new images/RAJESH.jpg.jpeg" alt="Rajesh" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Rajesh</h3>
+          </div>
+        </div>
+
+        <!-- Samundran -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/new images/SAMUNDRAN.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Samundran">
+          <img src="images/new images/SAMUNDRAN.jpg.jpeg" alt="Samundran" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Samundran</h3>
+          </div>
+        </div>
+
+        <!-- Saravanan -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/new images/SARAVANAN.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Saravanan">
+          <img src="images/new images/SARAVANAN.jpg.jpeg" alt="Saravanan" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Saravanan</h3>
+          </div>
+        </div>
+
+        <!-- Suprej -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/new images/SUPREJ.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Suprej">
+          <img src="images/new images/SUPREJ.jpg.jpeg" alt="Suprej" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Suprej</h3>
+          </div>
+        </div>
+
+        <!-- Syed -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/new images/SYED.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Syed">
+          <img src="images/new images/SYED.jpg.jpeg" alt="Syed" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Syed</h3>
+          </div>
+        </div>
+
+        <!-- Vijaya Kumar -->
+        <div class="masonry-item reveal-right"
+             data-category="residence"
+             data-img="images/new images/VIJAYA KUMAR.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Vijaya Kumar">
+          <img src="images/new images/VIJAYA KUMAR.jpg.jpeg" alt="Vijaya Kumar" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Vijaya Kumar</h3>
+          </div>
+        </div>
+
+        <!-- Wajith -->
+        <div class="masonry-item reveal-left"
+             data-category="residence"
+             data-img="images/new images/WAJITH.jpg.jpeg"
+             data-tag="Residence"
+             data-title="Wajith">
+          <img src="images/new images/WAJITH.jpg.jpeg" alt="Wajith" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Residence</span>
+            <h3 class="project-card-title">Wajith</h3>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/12.jpg"
+             data-tag="Interior"
+             data-title="Executive Lounge">
+          <img src="images/interior/12.jpg" alt="Executive Lounge" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Executive Lounge</h3>
+          </div>
+        </div>
+
+        <!-- 121 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/121.jpg"
+             data-tag="Interior"
+             data-title="Bespoke Living">
+          <img src="images/interior/121.jpg" alt="Bespoke Living" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Bespoke Living</h3>
+          </div>
+        </div>
+
+        <!-- 122 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/122.jpg"
+             data-tag="Interior"
+             data-title="Modern Living">
+          <img src="images/interior/122.jpg" alt="Modern Living" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Modern Living</h3>
+          </div>
+        </div>
+
+        <!-- 124 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/124.jpg"
+             data-tag="Interior"
+             data-title="Sleek Bedroom">
+          <img src="images/interior/124.jpg" alt="Sleek Bedroom" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Sleek Bedroom</h3>
+          </div>
+        </div>
+
+        <!-- 125 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/125.jpg"
+             data-tag="Interior"
+             data-title="Luxury Suite">
+          <img src="images/interior/125.jpg" alt="Luxury Suite" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Luxury Suite</h3>
+          </div>
+        </div>
+
+        <!-- 126 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/126.jpg"
+             data-tag="Interior"
+             data-title="Designer Bedroom">
+          <img src="images/interior/126.jpg" alt="Designer Bedroom" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Designer Bedroom</h3>
+          </div>
+        </div>
+
+        <!-- 127 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/127.jpg"
+             data-tag="Interior"
+             data-title="Feature Design">
+          <img src="images/interior/127.jpg" alt="Feature Design" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Feature Design</h3>
+          </div>
+        </div>
+
+        <!-- 129 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/129.jpg"
+             data-tag="Interior"
+             data-title="Creative Model">
+          <img src="images/interior/129.jpg" alt="Creative Model" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Creative Model</h3>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/13.jpg"
+             data-tag="Interior"
+             data-title="Elegant Foyer">
+          <img src="images/interior/13.jpg" alt="Elegant Foyer" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Elegant Foyer</h3>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/14.jpg"
+             data-tag="Interior"
+             data-title="Wellness Pooja Room">
+          <img src="images/interior/14.jpg" alt="Wellness Pooja Room" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Wellness Pooja Room</h3>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/15.jpg"
+             data-tag="Interior"
+             data-title="Pooja Hall">
+          <img src="images/interior/15.jpg" alt="Pooja Hall" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Pooja Hall</h3>
+          </div>
+        </div>
+
+        <!-- Interior -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/2.jpg"
+             data-tag="Interior"
+             data-title="Refined Interior">
+          <img src="images/interior/2.jpg" alt="Refined Interior" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Refined Interior</h3>
+          </div>
+        </div>
+
+        <!-- 21 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/21.jpg"
+             data-tag="Interior"
+             data-title="Grand Living">
+          <img src="images/interior/21.jpg" alt="Grand Living" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Grand Living</h3>
+          </div>
+        </div>
+
+        <!-- Interior -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/3.jpg"
+             data-tag="Interior"
+             data-title="Contemporary Ceiling">
+          <img src="images/interior/3.jpg" alt="Contemporary Ceiling" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Contemporary Ceiling</h3>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/4.jpg"
+             data-tag="Interior"
+             data-title="Elegant Kitchen">
+          <img src="images/interior/4.jpg" alt="Elegant Kitchen" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Elegant Kitchen</h3>
+          </div>
+        </div>
+
+        <!-- 401 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/401.jpg"
+             data-tag="Interior"
+             data-title="Chic Living">
+          <img src="images/interior/401.jpg" alt="Chic Living" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Chic Living</h3>
+          </div>
+        </div>
+
+        <!-- 41 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/41.jpg"
+             data-tag="Interior"
+             data-title="Artistic Interior">
+          <img src="images/interior/41.jpg" alt="Artistic Interior" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Artistic Interior</h3>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/5.jpg"
+             data-tag="Interior"
+             data-title="Premium Kitchen">
+          <img src="images/interior/5.jpg" alt="Premium Kitchen" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Premium Kitchen</h3>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/6.jpg"
+             data-tag="Interior"
+             data-title="Elegant Home Theater">
+          <img src="images/interior/6.jpg" alt="Elegant Home Theater" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Elegant Home Theater</h3>
+          </div>
+        </div>
+
+        <!-- 81 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/81.jpg"
+             data-tag="Interior"
+             data-title="Aesthetic Dining">
+          <img src="images/interior/81.jpg" alt="Aesthetic Dining" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Aesthetic Dining</h3>
+          </div>
+        </div>
+
+        <!-- 83 -->
+        <div class="masonry-item reveal-right"
+             data-category="interior"
+             data-img="images/interior/83.jpg"
+             data-tag="Interior"
+             data-title="Aesthetic Ceiling">
+          <img src="images/interior/83.jpg" alt="Aesthetic Ceiling" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Aesthetic Ceiling</h3>
+          </div>
+        </div>
+
+        <!-- 91 -->
+        <div class="masonry-item reveal-left"
+             data-category="interior"
+             data-img="images/interior/91.jpg"
+             data-tag="Interior"
+             data-title="Modern Bedroom">
+          <img src="images/interior/91.jpg" alt="Modern Bedroom" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Interior</span>
+            <h3 class="project-card-title">Modern Bedroom</h3>
+          </div>
+        </div>
+
+        <!-- Green Meadows Master  Plan,Yercaud -->
+        <div class="masonry-item reveal-right"
+             data-category="master-planning"
+             data-img="images/master-planning/1.GREEN MEDOS/GREEN MEADOWS MASTER  PLAN,YERCAUD.png"
+             data-tag="Master Planning"
+             data-title="Green Meadows Master  Plan,Yercaud">
+          <img src="images/master-planning/1.GREEN MEDOS/GREEN MEADOWS MASTER  PLAN,YERCAUD.png" alt="Green Meadows Master  Plan,Yercaud" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Master Planning</span>
+            <h3 class="project-card-title">Green Meadows Master  Plan,Yercaud</h3>
+          </div>
+        </div>
+
+        <!-- Arun Naik Master Plan -->
+        <div class="masonry-item reveal-left"
+             data-category="master-planning"
+             data-img="images/master-planning/ARUN_NAIK_MASTERPLAN.png"
+             data-tag="Master Planning"
+             data-title="Arun Naik">
+          <img src="images/master-planning/ARUN_NAIK_MASTERPLAN.png" alt="Arun Naik" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Master Planning</span>
+            <h3 class="project-card-title">Arun Naik</h3>
+          </div>
+        </div>
+
+        <!-- Arun Naik Master Plan -->
+        <div class="masonry-item reveal-right"
+             data-category="master-planning"
+             data-img="images/master-planning/ARUN_NAIK_MASTERPLAN.png"
+             data-tag="Master Planning"
+             data-title="Arun Naik">
+          <img src="images/master-planning/ARUN_NAIK_MASTERPLAN.png" alt="Arun Naik" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Master Planning</span>
+            <h3 class="project-card-title">Arun Naik</h3>
+          </div>
+        </div>
+
+        <!-- Rain Tree -->
+        <div class="masonry-item reveal-left"
+             data-category="master-planning"
+             data-img="images/master-planning/Rain Tree.png"
+             data-tag="Master Planning"
+             data-title="Rain Tree">
+          <img src="images/master-planning/Rain Tree.png" alt="Rain Tree" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Master Planning</span>
+            <h3 class="project-card-title">Rain Tree</h3>
+          </div>
+        </div>
+
+        <!-- Rain Trees - 901 -->
+        <div class="masonry-item reveal-right"
+             data-category="master-planning"
+             data-img="images/master-planning/901.jpg"
+             data-tag="Master Planning"
+             data-title="Rain Trees">
+          <img src="images/master-planning/901.jpg" alt="Rain Trees" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Master Planning</span>
+            <h3 class="project-card-title">Rain Trees</h3>
+          </div>
+        </div>
+
+        <!-- Rain Trees - 902 -->
+        <div class="masonry-item reveal-left"
+             data-category="master-planning"
+             data-img="images/master-planning/902.jpg"
+             data-tag="Master Planning"
+             data-title="Rain Trees">
+          <img src="images/master-planning/902.jpg" alt="Rain Trees" loading="lazy" />
+          <div class="masonry-overlay">
+            <span class="project-tag">Master Planning</span>
+            <h3 class="project-card-title">Rain Trees</h3>
+          </div>
+        </div>
+      </div><!-- /masonry-grid -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ═══ STATS STRIP ═══ -->
+  <section class="section section-dark stats-section">
+    <div class="stats-topo"></div>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="150" data-suffix="+">150+</span>
+          <p class="stat-label">Projects Delivered</p>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <span class="stat-num" data-count="18" data-suffix="">18</span>
+          <p class="stat-label">Design Awards</p>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <span class="stat-num" data-count="10" data-suffix="+">10+</span>
+          <p class="stat-label">Years of Excellence</p>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <span class="stat-num" data-count="98" data-suffix="%">98%</span>
+          <p class="stat-label">Client Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-content reveal">
+        <p class="section-label" style="color:var(--color-accent);">Start Your Project</p>
+        <h2 class="cta-title">Your Vision Deserves<br><em>A Place In This Portfolio</em></h2>
+        <p class="cta-text">
+          Every project begins with a conversation. Share your vision with us and we'll craft a space that exceeds your expectations.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Begin Your Project</a>
+          <a href="services.html" class="btn btn-outline">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">361° <span>Architects</span></span>
+          <span class="logo-sub">Studio — Architecture & Interiors</span>
+          <p>Crafting extraordinary spaces with precision, passion and purpose. Architecture | Interiors | 3D Visualization.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/studio.361?utm_source=qr&igsh=YWZkdWhwMzFhNWFp" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="none" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Architecture Design</a></li>
+            <li><a href="services.html">Interior Design</a></li>
+            <li><a href="services.html">3D Visualization</a></li>
+            <li><a href="services.html">Space Planning</a></li>
+            <li><a href="services.html">Landscape Concepts</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>222, Sv Complex, First Floor,<br>Opp New Bus Stand, Salem – 636 004</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.53 9.69 19.79 19.79 0 01.46 1.05 2 2 0 012.43 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.09a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121 17z"/></svg>
+            <span>+91 95005 96962</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>general.studio361@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 <span>Studio 361° Architects</span>. All rights reserved.</p>
+        <p class="footer-copy">Crafted with <span>♥</span> in Salem</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ LIGHTBOX ═══ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project image viewer">
+    <div class="lightbox-nav">
+      <button class="lightbox-btn" id="lb-prev" aria-label="Previous project">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M13 5l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="lightbox-btn" id="lb-next" aria-label="Next project">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M9 5l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" src="" alt="Project detail" />
+      <div class="lightbox-caption">
+        <span class="lb-tag project-tag"></span>
+        <h3 class="lb-title project-card-title" style="opacity:1;transform:none;margin-top:8px;font-size:18px;color:var(--color-white);"></h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Mouse Parallax for Topo Background
+    document.addEventListener('mousemove', (e) => {
+      const bg = document.querySelector('.topo-interactive-bg');
+      if (!bg) return;
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      bg.style.transform = `translate(${x}px, ${y}px) scale(1.1)`;
+    });
+  </script>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919500596962?text=Hello%20Studio%20361%20Architects%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Contact">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
