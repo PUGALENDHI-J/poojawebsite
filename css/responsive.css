@@ -1,0 +1,207 @@
+/* ============================================================
+   SPARKLE SHINE — responsive.css
+   Mobile-first responsive styles
+   ============================================================ */
+
+/* ============================================================
+   LARGE DESKTOP (1400px+)
+   ============================================================ */
+@media (min-width: 1400px) {
+  .product-grid,
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .hero-title { font-size: 5.8rem; }
+  .section { padding: 8rem 7%; }
+}
+
+/* ============================================================
+   DESKTOP (1024px - 1399px)
+   ============================================================ */
+@media (max-width: 1399px) {
+  .footer-top { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; }
+}
+
+/* ============================================================
+   LAPTOP (1024px - 1200px)
+   ============================================================ */
+@media (max-width: 1200px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .cat-card:first-child { grid-row: auto; grid-column: auto; }
+}
+
+/* ============================================================
+   TABLET (768px - 1023px)
+   ============================================================ */
+@media (max-width: 1023px) {
+  :root {
+    --gap-xl: 5rem;
+    --gap-lg: 3rem;
+  }
+
+  /* Navbar */
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* Hero */
+  .hero-stats { display: none; }
+  .scroll-indicator { display: none; }
+
+  /* Brand Story */
+  .brand-story {
+    grid-template-columns: 1fr;
+  }
+  .brand-story-img { min-height: 350px; }
+  .brand-story-content { padding: 4rem 5%; }
+
+  /* Grids */
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .categories-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .cat-card:first-child { grid-row: auto; grid-column: auto; }
+
+  /* Showcase */
+  .showcase-section { grid-template-columns: 1fr; }
+
+  /* About */
+  .about-intro { grid-template-columns: 1fr; gap: 3rem; }
+  .about-accent-img { display: none; }
+  .mission-vision { grid-template-columns: 1fr; }
+  .mv-card:first-child { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .mv-card { padding: 3rem; }
+
+  /* Timeline */
+  .timeline-items { grid-template-columns: 1fr; }
+  .timeline-line { display: none; }
+  .timeline-item:nth-child(odd) { text-align: left; }
+  .timeline-item { padding: 0 0 2.5rem; }
+
+  /* Product Detail */
+  .product-detail-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .product-gallery { position: static; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+  /* FAQ */
+  .faq-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ============================================================
+   MOBILE (max 767px)
+   ============================================================ */
+@media (max-width: 767px) {
+  :root {
+    --gap-xl: 4rem;
+    --gap-lg: 2.5rem;
+  }
+
+  html { font-size: 15px; }
+
+  /* Hide cursor on mobile */
+  .cursor-dot, .cursor-ring { display: none; }
+  body { cursor: auto; }
+
+  /* Navbar */
+  .navbar { padding: 1.2rem 5%; }
+  .nav-logo-name { font-size: 1.3rem; }
+
+  /* Hero */
+  .hero-content { padding: 7rem 5% 4rem; }
+  .hero-title { font-size: clamp(2rem, 9vw, 3rem); }
+
+  /* Sections */
+  .section { padding: 3.5rem 5%; }
+  .section-sm { padding: 2.5rem 5%; }
+
+  /* Grids */
+  .product-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .why-grid { grid-template-columns: 1fr; }
+  .values-row { grid-template-columns: 1fr; }
+  .categories-grid { grid-template-columns: 1fr; }
+  .cat-card { height: 260px; }
+  .cat-card:first-child { grid-row: auto; grid-column: auto; }
+
+  /* Showcase */
+  .showcase-section { grid-template-columns: 1fr; }
+
+  /* Featured header */
+  .featured-header { flex-direction: column; align-items: flex-start; }
+
+  /* Testimonials */
+  .testimonial-card { min-width: 85vw; }
+
+  /* CTA */
+  .cta-banner { padding: 4rem 5%; }
+  .cta-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cta-contact { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .cta-img-col { aspect-ratio: 16/9; }
+
+  /* Product detail */
+  .product-detail-actions { flex-direction: column; }
+  .product-thumbs { gap: 0.5rem; }
+  .product-thumb { width: 60px; height: 60px; }
+
+  /* Contact form */
+  .contact-form-wrap { padding: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+
+  /* About */
+  .mv-card { padding: 2.5rem; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  /* Back to top */
+  #back-to-top { bottom: 5.5rem; right: 1.5rem; }
+  .whatsapp-float { bottom: 1.5rem; left: 1.5rem; }
+
+  /* Buttons */
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  .hero-actions { flex-direction: column; }
+
+  /* Product info */
+  .product-info { padding: 1rem; }
+  .product-name { font-size: 1rem; }
+}
+
+/* ============================================================
+   EXTRA SMALL (max 380px)
+   ============================================================ */
+@media (max-width: 380px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 2rem; }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .fade-up, .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

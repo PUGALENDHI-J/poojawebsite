@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Sparkle Shine Herbal Beauty</title>
+  <meta name="description" content="Browse 200+ premium herbal beauty products — skincare, haircare, lip care, body care and special kits." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div id="scroll-progress"></div>
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+  <a href="https://wa.me/917338801545" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51A12.05 12.05 0 009.14 7c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.844L.057 23.99l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.55 9.55 0 01-4.87-1.334l-.35-.208-3.622.951.969-3.532-.228-.362A9.558 9.558 0 012.4 12C2.4 6.698 6.698 2.4 12 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.302-4.298 9.6-9.6 9.6z"/></svg>
+  </a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Sparkle Shine</span>
+      <span class="nav-logo-tag">Herbal · Natural · Pure</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Order Now</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+  <nav class="nav-mobile">
+    <a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--gold)">Order Now →</a>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Products</span>
+      </nav>
+      <p class="section-label">Our Collection</p>
+      <h1 class="page-header-title">All <em>Products</em></h1>
+      <p class="page-header-desc">200+ handcrafted herbal beauty products. Pure. Natural. Effective.</p>
+    </div>
+  </header>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products-section">
+    <div class="products-toolbar">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-cat="all">All Products</button>
+        <button class="filter-tab" data-cat="skin">Skin Care</button>
+        <button class="filter-tab" data-cat="hair">Hair Care</button>
+        <button class="filter-tab" data-cat="lip">Lip Care</button>
+        <button class="filter-tab" data-cat="body">Body Care</button>
+        <button class="filter-tab" data-cat="kits">Kits &amp; Combos</button>
+      </div>
+      <p class="products-count">Showing 24 products</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- SKIN CARE -->
+      <a href="product-details.html" class="product-card fade-up" data-cat="skin">
+        <div class="product-img-wrap">
+          <img src="images/face-pack-forest.jpg" alt="Herbal Glow Face Pack Powder" loading="lazy" />
+          <span class="product-badge">Bestseller</span>
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Skin Care</p>
+          <h3 class="product-name">Herbal Glow Face Pack Powder</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹65 – ₹110</span>
+            <span class="product-sizes">50g / 100g</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="skin">
+        <div class="product-img-wrap">
+          <img src="images/download.jpg" alt="Face Serum" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Skin Care</p>
+          <h3 class="product-name">Face Serum (8 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹150</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="skin">
+        <div class="product-img-wrap">
+          <img src="images/download (2).jpg" alt="Skin Brightening Serum" loading="lazy" />
+          <span class="product-badge">New</span>
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Skin Care</p>
+          <h3 class="product-name">Skin Brightening Serum</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹200</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="skin">
+        <div class="product-img-wrap">
+          <img src="images/download (3).jpg" alt="Day & Night Cream" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Skin Care</p>
+          <h3 class="product-name">Day &amp; Night Cream (15 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹180</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="skin">
+        <div class="product-img-wrap">
+          <img src="images/download (5).jpg" alt="Under Eye Cream" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Skin Care</p>
+          <h3 class="product-name">Under Eye Cream &amp; Roll-On</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹120</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="skin">
+        <div class="product-img-wrap">
+          <img src="images/images.jpg" alt="Face Scrub" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Skin Care</p>
+          <h3 class="product-name">Face Scrub (8 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹130</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- HAIR CARE -->
+      <a href="product-details.html" class="product-card fade-up" data-cat="hair">
+        <div class="product-img-wrap">
+          <img src="images/download (4).jpg" alt="Ayurvedic Hair Oil" loading="lazy" />
+          <span class="product-badge">Popular</span>
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Hair Care</p>
+          <h3 class="product-name">Ayurvedic Hair Oil (10 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹199</span>
+            <span class="product-sizes">100ml</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="hair">
+        <div class="product-img-wrap">
+          <img src="images/face-pack-forest.jpg" alt="Dandruff Control Hair Pack" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Hair Care</p>
+          <h3 class="product-name">Dandruff Control Hair Pack</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹65</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="hair">
+        <div class="product-img-wrap">
+          <img src="images/download (1).jpg" alt="Anti-Hair Fall Growth Pack" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Hair Care</p>
+          <h3 class="product-name">Anti-Hair Fall Growth Pack</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹65</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="hair">
+        <div class="product-img-wrap">
+          <img src="images/download (4).jpg" alt="Natural Shampoo" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Hair Care</p>
+          <h3 class="product-name">Natural Shampoo (16 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹150</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- LIP CARE -->
+      <a href="product-details.html" class="product-card fade-up" data-cat="lip">
+        <div class="product-img-wrap">
+          <img src="images/download (3).jpg" alt="Beetroot Lip Balm" loading="lazy" />
+          <span class="product-badge">Bestseller</span>
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Lip Care</p>
+          <h3 class="product-name">Beetroot Lip Balm</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹50 – ₹70</span>
+            <span class="product-sizes">8g / 15g</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="lip">
+        <div class="product-img-wrap">
+          <img src="images/download (3).jpg" alt="Lip Scrub" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Lip Care</p>
+          <h3 class="product-name">Lip Scrub (10 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹80</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="lip">
+        <div class="product-img-wrap">
+          <img src="images/download (3).jpg" alt="Lip & Cheek Tints" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Lip Care</p>
+          <h3 class="product-name">Lip &amp; Cheek Tints (5 Shades)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹90</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- BODY CARE -->
+      <a href="product-details.html" class="product-card fade-up" data-cat="body">
+        <div class="product-img-wrap">
+          <img src="images/download (1).jpg" alt="Body Polishing Scrub" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Body Care</p>
+          <h3 class="product-name">Body Polishing Scrub (3 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹160</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="body">
+        <div class="product-img-wrap">
+          <img src="images/download (4).jpg" alt="Herbal Shower Gel" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Body Care</p>
+          <h3 class="product-name">Herbal Shower Gel (5 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹180</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="body">
+        <div class="product-img-wrap">
+          <img src="images/images.jpg" alt="Natural Body Butter" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Body Care</p>
+          <h3 class="product-name">Natural Body Butter (5 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹200</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- KITS & COMBOS -->
+      <a href="product-details.html" class="product-card fade-up" data-cat="kits">
+        <div class="product-img-wrap">
+          <img src="images/download (4).jpg" alt="Hair Oil + Hair Pack Combo" loading="lazy" />
+          <span class="product-badge gold">Best Value</span>
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Special Combo</p>
+          <h3 class="product-name">Hair Oil + Hair Pack Combo</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹250</span>
+            <span class="product-sizes" style="color:var(--green-mid)">Save ₹14!</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="kits">
+        <div class="product-img-wrap">
+          <img src="images/download (3).jpg" alt="Bridal Glow Cream Kit" loading="lazy" />
+          <span class="product-badge">Premium</span>
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Bridal Kit</p>
+          <h3 class="product-name">Bridal Glow Cream Kit (5 Types)</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹350</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="kits">
+        <div class="product-img-wrap">
+          <img src="images/download (2).jpg" alt="Skin Whitening Complete Kit" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Whitening Kit</p>
+          <h3 class="product-name">Skin Whitening Complete Kit</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹400</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="product-details.html" class="product-card fade-up" data-cat="kits">
+        <div class="product-img-wrap">
+          <img src="images/download.jpg" alt="Anti-Aging Beauty Kit" loading="lazy" />
+          <div class="product-quick-view">View Details →</div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Anti-Aging</p>
+          <h3 class="product-name">Anti-Aging Beauty Kit</h3>
+          <div class="product-price-row">
+            <span class="product-price">From ₹450</span>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /products-grid -->
+
+    <!-- Load More -->
+    <div style="text-align:center;margin-top:4rem;">
+      <button class="btn-outline" style="border-color:var(--green-mid);color:var(--green-mid);" onclick="this.textContent='Loading…';setTimeout(()=>this.textContent='All Products Shown!',800)">
+        Load More Products
+      </button>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <p class="section-label">Can't Find What You Need?</p>
+    <h2 class="cta-title fade-up">We Have <em>200+ Products</em></h2>
+    <p class="cta-desc fade-up">Contact us directly and we'll help you find the perfect herbal solution for your needs.</p>
+    <div class="fade-up" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn-primary">Contact Us</a>
+      <a href="https://wa.me/917338801545" class="btn-secondary" target="_blank">WhatsApp Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Sparkle Shine</div>
+        <div class="footer-brand-tag">Herbal Glow · Natural Skin Care</div>
+        <p class="footer-desc">Handcrafted herbal beauty products — pure, natural, and effective for all skin types.</p>
+        <div class="footer-contact-item">📞 7603967175 / 7338801545</div>
+      </div>
+      <div><div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div><div class="footer-col-title">Categories</div>
+        <ul class="footer-links">
+          <li><a href="products.html?cat=skin">Skin Care</a></li>
+          <li><a href="products.html?cat=hair">Hair Care</a></li>
+          <li><a href="products.html?cat=lip">Lip Care</a></li>
+          <li><a href="products.html?cat=body">Body Care</a></li>
+          <li><a href="products.html?cat=kits">Kits &amp; Combos</a></li>
+        </ul>
+      </div>
+      <div><div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:7603967175">📞 7603967175</a></li>
+          <li><a href="https://wa.me/917338801545">💬 WhatsApp</a></li>
+          <li><a href="contact.html">✉️ Send Enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Sparkle Shine. All rights reserved. Made with ♥ in India.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="https://wa.me/917338801545" aria-label="WhatsApp">💬</a>
+        <a href="#" aria-label="Facebook">📘</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // Read URL params for category filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('cat');
+    if (catParam) {
+      const tab = document.querySelector(`.filter-tab[data-cat="${catParam}"]`);
+      if (tab) setTimeout(() => tab.click(), 100);
+    }
+  </script>
+</body>
+</html>

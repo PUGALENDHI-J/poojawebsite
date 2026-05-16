@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparkle Shine — Herbal Glow Natural Skin Care</title>
+  <meta name="description" content="Premium herbal skincare & cosmetics handcrafted with nature's finest ingredients. 100% natural, chemical-free beauty products." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       LOADER
+  ======================================================= -->
+  <div id="loader">
+    <p class="loader-logo">Sparkle Shine</p>
+    <p class="loader-sub">Herbal Glow · Natural Beauty</p>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/917338801545" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.844L.057 23.99l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.55 9.55 0 01-4.87-1.334l-.35-.208-3.622.951.969-3.532-.228-.362A9.558 9.558 0 012.4 12C2.4 6.698 6.698 2.4 12 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.302-4.298 9.6-9.6 9.6z"/>
+    </svg>
+  </a>
+
+  <!-- ======================================================
+       NAVBAR
+  ======================================================= -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Sparkle Shine</span>
+      <span class="nav-logo-tag">Herbal · Natural · Pure</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Order Now</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--gold)">Order Now →</a>
+  </nav>
+
+  <!-- ======================================================
+       HERO
+  ======================================================= -->
+  <section class="hero" aria-label="Hero banner">
+    <div class="hero-bg"></div>
+    <img src="images/face-pack-forest.jpg" alt="" class="hero-bg-img" aria-hidden="true" />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-label fade-in">100% Natural &amp; Handcrafted</p>
+      <h1 class="hero-title fade-up">
+        Beauty Born
+        <em>From Herbs</em>
+      </h1>
+      <p class="hero-desc fade-up">
+        Experience the ancient wisdom of herbal beauty, redefined for the modern world. Pure ingredients, handcrafted with love — for skin that truly glows.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="products.html" class="btn-primary">
+          Explore Products
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="about.html" class="btn-secondary">Our Story</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="200" data-suffix="+">200+</div>
+        <div class="hero-stat-lbl">Products</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="5000" data-suffix="+">5K+</div>
+        <div class="hero-stat-lbl">Happy Customers</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-lbl">Natural</div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ======================================================
+       MARQUEE STRIP
+  ======================================================= -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      <span class="marquee-item">Free Shipping Nationwide</span>
+      <span class="marquee-item">100% Herbal Ingredients</span>
+      <span class="marquee-item">No Harmful Chemicals</span>
+      <span class="marquee-item">Handcrafted with Love</span>
+      <span class="marquee-item">Safe for All Skin Types</span>
+      <span class="marquee-item">200+ Products Available</span>
+      <span class="marquee-item">Organic &amp; Natural</span>
+      <span class="marquee-item">Call: 7603967175</span>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       FEATURED PRODUCTS
+  ======================================================= -->
+  <section class="featured-section section" id="featured">
+    <div class="featured-header">
+      <div>
+        <p class="section-label fade-in">Our Bestsellers</p>
+        <h2 class="section-title fade-up">
+          Nature's Finest<br /><em>Formulations</em>
+        </h2>
+      </div>
+      <a href="products.html" class="btn-outline fade-in">View All Products</a>
+    </div>
+
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card fade-up">
+        <div class="product-img-wrap">
+          <img src="images/face-pack-forest.jpg" alt="Herbal Glow Face Pack Powder" loading="lazy" />
+          <span class="product-badge">Bestseller</span>
+          <div class="product-quick-view">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Quick View
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Skin Care</p>
+          <h3 class="product-name">Herbal Glow Face Pack Powder</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹65 – ₹110</span>
+            <span class="product-sizes">50g / 100g</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card fade-up">
+        <div class="product-img-wrap">
+          <img src="images/download (4).jpg" alt="Ayurvedic Hair Growth Oil" loading="lazy" />
+          <span class="product-badge gold">New</span>
+          <div class="product-quick-view">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Quick View
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Hair Care</p>
+          <h3 class="product-name">Ayurvedic Hair Growth Oil</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹199</span>
+            <span class="product-sizes">100ml</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card fade-up">
+        <div class="product-img-wrap">
+          <img src="images/download (3).jpg" alt="Beetroot Lip Balm" loading="lazy" />
+          <div class="product-quick-view">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Quick View
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Lip Care</p>
+          <h3 class="product-name">Beetroot Lip Balm</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹50 – ₹70</span>
+            <span class="product-sizes">8g / 15g</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card fade-up">
+        <div class="product-img-wrap">
+          <img src="images/download (2).jpg" alt="Eyebrow Growth Oil" loading="lazy" />
+          <div class="product-quick-view">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Quick View
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Hair Care</p>
+          <h3 class="product-name">Eyebrow Growth Oil</h3>
+          <div class="product-price-row">
+            <span class="product-price">₹115</span>
+            <span class="product-sizes">10ml</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-story" aria-label="Brand story">
+    <div class="brand-story-img">
+      <img src="images/face-pack-forest.jpg" alt="Sparkle Shine herbal products" loading="lazy" />
+      <div class="brand-story-img-overlay"></div>
+    </div>
+    <div class="brand-story-content">
+      <p class="section-label fade-in">Our Philosophy</p>
+      <h2 class="section-title fade-up">
+        Where Tradition Meets<br /><em>Modern Beauty</em>
+      </h2>
+      <div class="divider"></div>
+      <p class="section-desc fade-up">
+        At Sparkle Shine, we believe in the power of nature. Every product is handcrafted using time-honoured herbal recipes, free from harmful chemicals, and made with the purest ingredients sourced from nature.
+      </p>
+      <div class="values-row">
+        <div class="value-item fade-up">
+          <div class="value-icon">🌿</div>
+          <div class="value-title">100% Herbal</div>
+          <div class="value-desc">Only nature's finest, no synthetic fillers</div>
+        </div>
+        <div class="value-item fade-up">
+          <div class="value-icon">🤲</div>
+          <div class="value-title">Handcrafted</div>
+          <div class="value-desc">Made with care, batch by small batch</div>
+        </div>
+        <div class="value-item fade-up">
+          <div class="value-icon">✨</div>
+          <div class="value-title">Pure Glow</div>
+          <div class="value-desc">Results you can see and feel naturally</div>
+        </div>
+      </div>
+      <div style="margin-top:2.5rem;" class="fade-up">
+        <a href="about.html" class="btn-secondary">Discover Our Story →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CATEGORIES SHOWCASE
+  ======================================================= -->
+  <section class="categories-section section" id="categories">
+    <div>
+      <p class="section-label fade-in">Shop by Category</p>
+      <h2 class="section-title fade-up">
+        Explore Our<br /><em>Collections</em>
+      </h2>
+    </div>
+    <div class="categories-grid">
+      <a href="products.html?cat=skin" class="cat-card">
+        <div class="cat-card-bg cat-bg-1">
+          <img src="images/download (2).jpg" alt="Skin Care" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:0.5" />
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <p class="cat-label">Collection</p>
+          <h3 class="cat-name">Skin Care</h3>
+          <p class="cat-count">Face packs, serums, creams &amp; more</p>
+          <span class="cat-arrow">Explore →</span>
+        </div>
+      </a>
+      <a href="products.html?cat=hair" class="cat-card">
+        <div class="cat-card-bg cat-bg-2">
+          <img src="images/download (4).jpg" alt="Hair Care" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:0.5" />
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <p class="cat-label">Collection</p>
+          <h3 class="cat-name">Hair Care</h3>
+          <p class="cat-count">Oils, shampoos, packs &amp; serums</p>
+          <span class="cat-arrow">Explore →</span>
+        </div>
+      </a>
+      <a href="products.html?cat=lip" class="cat-card">
+        <div class="cat-card-bg cat-bg-4">
+          <img src="images/download (3).jpg" alt="Lip Care" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:0.5" />
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <p class="cat-label">Collection</p>
+          <h3 class="cat-name">Lip Care</h3>
+          <p class="cat-count">Balms, butters, scrubs &amp; serums</p>
+          <span class="cat-arrow">Explore →</span>
+        </div>
+      </a>
+      <a href="products.html?cat=body" class="cat-card">
+        <div class="cat-card-bg cat-bg-3">
+          <img src="images/download (1).jpg" alt="Body Care" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:0.5" />
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <p class="cat-label">Collection</p>
+          <h3 class="cat-name">Body Care</h3>
+          <p class="cat-count">Scrubs, washes, butters &amp; lotions</p>
+          <span class="cat-arrow">Explore →</span>
+        </div>
+      </a>
+      <a href="products.html?cat=kits" class="cat-card">
+        <div class="cat-card-bg cat-bg-5">
+          <img src="images/download.jpg" alt="Kits & Combos" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:0.5" />
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <p class="cat-label">Special</p>
+          <h3 class="cat-name">Kits &amp; Combos</h3>
+          <p class="cat-count">Bridal, whitening, anti-aging &amp; more</p>
+          <span class="cat-arrow">Explore →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       WHY CHOOSE US
+  ======================================================= -->
+  <section class="why-section section" aria-label="Why choose us">
+    <p class="section-label fade-in">Why Sparkle Shine</p>
+    <h2 class="section-title fade-up">
+      The Difference<br /><em>You Can Feel</em>
+    </h2>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-num">01</div>
+        <div class="why-icon">🌱</div>
+        <h3 class="why-title">100% Natural Ingredients</h3>
+        <p class="why-desc">Every ingredient is carefully chosen from nature's bounty — Aavaram Poo, Rose Petals, Neem, Sandalwood and more. No synthetics, ever.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">02</div>
+        <div class="why-icon">🛡️</div>
+        <h3 class="why-title">Chemical Free</h3>
+        <p class="why-desc">Formulated without parabens, sulfates, silicones or harmful preservatives. Safe for all ages including children and sensitive skin types.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">03</div>
+        <div class="why-icon">🤍</div>
+        <h3 class="why-title">Handcrafted with Care</h3>
+        <p class="why-desc">Each product is made in small batches to ensure quality and freshness. You receive beauty products crafted with attention and intention.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">04</div>
+        <div class="why-icon">🚚</div>
+        <h3 class="why-title">Free Nationwide Shipping</h3>
+        <p class="why-desc">We deliver across India at no extra charge. Order from anywhere and receive your herbal treasures right at your doorstep.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TESTIMONIALS
+  ======================================================= -->
+  <section class="testimonials-section section" aria-label="Customer testimonials">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:0">
+      <div>
+        <p class="section-label fade-in">What They Say</p>
+        <h2 class="section-title fade-up">
+          Loved by Thousands<br /><em>Across India</em>
+        </h2>
+      </div>
+      <div class="testimonials-nav fade-in">
+        <button class="testi-btn prev" aria-label="Previous testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="testi-btn next" aria-label="Next testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div style="overflow:hidden;margin-top:3.5rem;">
+      <div class="testimonials-track">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">The face pack powder has transformed my skin completely! I've been using it for 3 months and my skin is visibly brighter and my tan has reduced so much. Completely natural, no side effects.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">P</div>
+            <div>
+              <div class="testimonial-name">Priya Sundaram</div>
+              <div class="testimonial-location">Chennai, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">The hair oil is absolutely amazing! My hair fall reduced within 2 weeks of use. The Ayurvedic formula smells divine and my scalp feels so nourished. Highly recommend!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Rekha Iyer</div>
+              <div class="testimonial-location">Coimbatore, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Ordered the beetroot lip balm for my daughter — she loves it! The colour is natural and beautiful, and her dry lips are completely healed. Will be ordering more products soon!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Meenakshi Raj</div>
+              <div class="testimonial-location">Madurai, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">I purchased the combo offer and it's incredible value! The hair pack combined with the oil has made my hair so thick and shiny. Delivery was quick too. 5 stars!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div>
+              <div class="testimonial-name">Sathya Kumar</div>
+              <div class="testimonial-location">Bangalore, Karnataka</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Best natural skincare brand I've found! The ingredients list is transparent, the products are affordable, and the results are genuine. My whole family uses Sparkle Shine now!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Anitha Devi</div>
+              <div class="testimonial-location">Tirunelveli, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SHOWCASE IMAGES
+  ======================================================= -->
+  <section class="showcase-section" aria-label="Product showcase">
+    <div class="showcase-img">
+      <img src="images/download (1).jpg" alt="Herbal Face Pack" loading="lazy" />
+      <div class="showcase-img-label">Herbal Face Pack</div>
+    </div>
+    <div class="showcase-img">
+      <img src="images/face-pack-forest.jpg" alt="Natural Ingredients" loading="lazy" />
+      <div class="showcase-img-label">Pure Ingredients</div>
+    </div>
+    <div class="showcase-img">
+      <img src="images/download (5).jpg" alt="Sparkle Shine Range" loading="lazy" />
+      <div class="showcase-img-label">Full Collection</div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CTA BANNER
+  ======================================================= -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="cta-inner">
+      <div class="cta-text-col">
+        <p class="section-label fade-in">Start Your Journey</p>
+        <h2 class="cta-title fade-up">
+          Ready to Glow<br /><em>Naturally?</em>
+        </h2>
+        <p class="cta-desc fade-up">Order now and experience the power of pure herbal beauty. Free shipping across India!</p>
+        <div class="fade-up">
+          <a href="products.html" class="btn-primary" style="display:inline-flex;">
+            Shop the Collection
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="cta-contact fade-up">
+          <div class="cta-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.9 15.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013.81 4.7h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 12a16 16 0 006.09 6.09l1.36-1.36a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            7603967175
+          </div>
+          <div class="cta-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51A12.05 12.05 0 009.14 7c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            WhatsApp: 7338801545
+          </div>
+        </div>
+      </div>
+      <div class="cta-img-col">
+        <img src="images/download (5).jpg" alt="Sparkle Shine Herbal Beauty" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Sparkle Shine</div>
+        <div class="footer-brand-tag">Herbal Glow · Natural Skin Care</div>
+        <p class="footer-desc">
+          Handcrafted herbal beauty products made with love and nature's finest ingredients. 100% natural, chemical-free, and safe for all skin types.
+        </p>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.9 15.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013.81 4.7h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 12a16 16 0 006.09 6.09l1.36-1.36a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          7603967175 / 7338801545
+        </div>
+        <div class="footer-contact-item" style="margin-top:0.4rem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sparkleshine@herbal.com
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Categories</div>
+        <ul class="footer-links">
+          <li><a href="products.html?cat=skin">Skin Care</a></li>
+          <li><a href="products.html?cat=hair">Hair Care</a></li>
+          <li><a href="products.html?cat=lip">Lip Care</a></li>
+          <li><a href="products.html?cat=body">Body Care</a></li>
+          <li><a href="products.html?cat=kits">Kits &amp; Combos</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Popular Products</div>
+        <ul class="footer-links">
+          <li><a href="product-details.html">Face Pack Powder</a></li>
+          <li><a href="product-details.html">Beetroot Lip Balm</a></li>
+          <li><a href="product-details.html">Hair Growth Oil</a></li>
+          <li><a href="product-details.html">Eyebrow Growth Oil</a></li>
+          <li><a href="product-details.html">Hair Growth Pack</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Sparkle Shine. All rights reserved. Handcrafted with ♥ in India.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://wa.me/917338801545" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51A12.05 12.05 0 009.14 7c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
