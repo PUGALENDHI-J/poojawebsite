@@ -1454,6 +1454,21 @@ footer {
 [data-delay="5"] { transition-delay: 0.5s; }
 [data-delay="6"] { transition-delay: 0.6s; }
 
+.intro-grid,
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-milestones-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1100px) {
   :root { --section-pad: 100px; }
@@ -1478,6 +1493,9 @@ footer {
   .process-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .process-grid::before { display: none; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .intro-grid,
+  .about-story-grid,
+  .about-milestones-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 640px) {
