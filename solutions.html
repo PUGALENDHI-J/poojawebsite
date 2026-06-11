@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     /* Solutions-specific styles */
+    .solutions-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
     .solutions-hero-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -328,12 +333,14 @@
       .tech-platform-grid { grid-template-columns: 1fr; gap: 40px; }
       .industry-grid { grid-template-columns: repeat(2, 1fr); }
       .client-logos-grid { grid-template-columns: repeat(3, 1fr); }
+      .solutions-card-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 600px) {
       .solutions-hero-stats { grid-template-columns: 1fr; }
       .industry-grid { grid-template-columns: repeat(2, 1fr); }
       .client-logos-grid { grid-template-columns: repeat(2, 1fr); }
       .tech-platform { padding: 36px 24px; }
+      .solutions-card-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -407,7 +414,7 @@
       <p class="section-desc">OHC delivers a fully integrated suite of corporate health solutions — from onsite camps and pre-employment evaluations to ongoing health monitoring and digital record management — all customizable to your organization's needs.</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" data-animate data-delay="2">
+    <div class="solutions-card-grid">
       <div class="solution-card">
         <div class="solution-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/><path d="M12 12v4m-2-2h4"/></svg>
@@ -706,7 +713,7 @@
       <div class="eyebrow">Why Choose OHC</div>
       <h2 class="display-md" id="why-ohc-heading">The Corporate Healthcare Partner You Can Rely On</h2>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" data-animate data-delay="2">
+    <div class="solutions-card-grid">
       <div style="padding: 36px 32px; border-left: 3px solid var(--accent);">
         <div style="font-family: var(--font-serif); font-size: 2.4rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 16px;">01</div>
         <h3 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 12px;">Zero Operational Disruption</h3>
