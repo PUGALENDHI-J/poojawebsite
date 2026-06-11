@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact OHC Services — Book a Health Checkup in Chennai</title>
+  <meta name="description" content="Book your executive health checkup, corporate wellness camp, or home collection with OHC Services. Two convenient locations in Chennai, plus onsite and home visits." />
+  <meta property="og:title" content="Contact OHC Services — Chennai's Preventive Healthcare Leader" />
+  <meta property="og:description" content="Get in touch with OHC Services to book health checkups, corporate camps, and home collection in Chennai." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <style>
+    /* Contact-specific styles */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info-block {
+      position: sticky;
+      top: 100px;
+    }
+
+    .contact-detail-card {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-xl);
+      padding: 40px 36px;
+      margin-bottom: 20px;
+    }
+
+    .contact-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-detail-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .contact-detail-item:first-child {
+      padding-top: 0;
+    }
+
+    .contact-detail-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(15,76,129,0.08);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-detail-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent);
+    }
+    .contact-detail-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .contact-detail-value {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+    .contact-detail-note {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 3px;
+    }
+
+    /* Form styles */
+    .contact-form-card {
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 52px 48px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .form-label span {
+      color: var(--accent);
+    }
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: var(--bg-secondary);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(15,76,129,0.08);
+      background: var(--bg-primary);
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--text-secondary);
+      opacity: 0.7;
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-select-wrap {
+      position: relative;
+    }
+    .form-select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid var(--text-secondary);
+      pointer-events: none;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-submit {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .form-privacy {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    .form-success {
+      display: none;
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .form-success.show {
+      display: block;
+    }
+    .form-success h3 {
+      font-family: var(--font-serif);
+      color: #166534;
+      margin-bottom: 8px;
+    }
+    .form-success p {
+      color: #15803d;
+      font-size: 0.88rem;
+    }
+
+    /* Locations */
+    .locations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .location-card {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .location-card:hover {
+      box-shadow: 0 16px 40px rgba(15,76,129,0.1);
+    }
+    .location-map-placeholder {
+      height: 200px;
+      background: linear-gradient(135deg, #e8f0f8 0%, #d0e4f5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .location-map-placeholder::before {
+      content: '';
+      position: absolute;
+      width: 120px; height: 120px;
+      background: rgba(15,76,129,0.06);
+      border-radius: 50%;
+      top: 30px; right: 30px;
+    }
+    .location-map-placeholder::after {
+      content: '';
+      position: absolute;
+      width: 80px; height: 80px;
+      background: rgba(15,76,129,0.04);
+      border-radius: 50%;
+      bottom: 20px; left: 20px;
+    }
+    .location-map-pin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 1;
+    }
+    .location-map-pin svg {
+      width: 40px;
+      height: 40px;
+      stroke: var(--accent);
+    }
+    .location-map-pin span {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .location-body {
+      padding: 32px 28px;
+    }
+    .location-name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .location-address {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .location-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .location-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: rgba(15,76,129,0.08);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 5px 12px;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      gap: 24px;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-arrow {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-arrow {
+      transform: rotate(180deg);
+      stroke: var(--accent);
+    }
+    .faq-item.open .faq-q {
+      color: var(--accent);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+    }
+    .faq-a-inner {
+      padding-bottom: 24px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 1024px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+      .contact-info-block { position: static; }
+      .contact-form-card { padding: 36px 28px; }
+    }
+    @media (max-width: 700px) {
+      .form-row { grid-template-columns: 1fr; }
+      .locations-grid { grid-template-columns: 1fr; }
+      .contact-form-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="OHC Services Home">
+      <div class="nav-logo-mark">OHC</div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">OHC Services</span>
+        <span class="nav-logo-tagline">Preventive Healthcare</span>
+      </div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <span class="nav-phone">+91 44 2345 6789</span>
+      <a href="contact.html" class="btn btn-primary">Book Checkup</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="solutions.html" class="nav-link">Solutions</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="background: url('assets/images/hero-services.webp') center/cover no-repeat; position: relative;" aria-label="Contact hero">
+  <div style="position: absolute; inset: 0; background: rgba(10,15,26,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); z-index: 1;"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="page-hero-content">
+      <div class="eyebrow" style="color: rgba(255,255,255,0.7);">We're Here for You</div>
+      <h1 class="display-lg page-hero-title">Your Health Journey<br/>Begins With One Step</h1>
+      <p class="page-hero-desc">Whether you're booking a personal checkup, planning a corporate wellness camp, or enquiring about home collection — our team is ready to assist you within the hour.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT MAIN SECTION -->
+<section class="section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: Contact Info -->
+      <div class="contact-info-block" data-animate>
+        <div class="eyebrow">Get in Touch</div>
+        <h2 class="display-sm" id="contact-heading" style="margin-bottom: 32px;">Talk to Our<br/>Healthcare Team</h2>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Phone</div>
+              <div class="contact-detail-value">+91 44 2345 6789</div>
+              <div class="contact-detail-note">Mon – Sat · 8:00 AM – 7:00 PM</div>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <div class="contact-detail-value">info@ohcservices.com</div>
+              <div class="contact-detail-note">Response within 4 business hours</div>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Anna Nagar Centre</div>
+              <div class="contact-detail-value">No. 7, SM Narayana Nagar,<br/>Annanagar West Extn,<br/>Chennai – 600101</div>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Nungambakkam Centre</div>
+              <div class="contact-detail-value">No. 105B, Kamarajnagar,<br/>Padikuppam Main Road,<br/>Chennai – 600040</div>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Operating Hours</div>
+              <div class="contact-detail-value">Monday – Saturday: 8:00 AM – 7:00 PM</div>
+              <div class="contact-detail-note">Sunday: By appointment only for corporate camps</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, var(--accent), var(--accent-teal)); border-radius: var(--radius-xl); padding: 32px 28px; color: white;">
+          <div style="font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 12px;">Online Portal</div>
+          <p style="font-size: 0.9rem; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: 20px;">Access your existing health records, download past reports, and compare test results at any time through our secure patient portal.</p>
+          <a href="https://www.lis.ohcservices.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: white; text-decoration: none; background: rgba(255,255,255,0.15); border-radius: 100px; padding: 10px 20px; transition: background 0.2s;">
+            lis.ohcservices.com
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div data-animate="slide-right">
+        <div class="contact-form-card">
+          <div style="margin-bottom: 36px;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.7rem; color: var(--text-primary); margin-bottom: 10px;">Book a Health Checkup</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">Fill in the form below and our team will confirm your appointment within 2 hours during working hours.</p>
+          </div>
+
+          <div id="contact-success" class="form-success" role="alert">
+            <h3>Thank You — Request Received</h3>
+            <p>Our healthcare team will contact you shortly to confirm your appointment details. You can also reach us directly at +91 44 2345 6789.</p>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First Name <span>*</span></label>
+                <input class="form-input" type="text" id="first-name" name="first_name" placeholder="Arjun" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last Name <span>*</span></label>
+                <input class="form-input" type="text" id="last-name" name="last_name" placeholder="Krishnamurthy" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number <span>*</span></label>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98400 XXXXX" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="arjun@company.com" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="enquiry-type">Type of Enquiry <span>*</span></label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="enquiry-type" name="enquiry_type" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="executive">Executive Health Checkup</option>
+                  <option value="master">Master Health Checkup</option>
+                  <option value="overseas">Overseas Health Checkup</option>
+                  <option value="corporate">Corporate Wellness Camp</option>
+                  <option value="pre-employment">Pre-Employment Evaluation</option>
+                  <option value="home-collection">Home Collection</option>
+                  <option value="women">Well Women Checkup</option>
+                  <option value="diabetic">Diabetic Health Checkup</option>
+                  <option value="heart">Heart Health Checkup</option>
+                  <option value="child">Child Health Checkup</option>
+                  <option value="other">Other / General Enquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="preferred-centre">Preferred Centre</label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="preferred-centre" name="preferred_centre">
+                  <option value="" disabled selected>Select a centre</option>
+                  <option value="anna-nagar">Anna Nagar Centre (Chennai – 600101)</option>
+                  <option value="nungambakkam">Nungambakkam Centre (Chennai – 600040)</option>
+                  <option value="onsite">Onsite at My Workplace</option>
+                  <option value="home">Home Visit</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="preferred-date">Preferred Date</label>
+              <input class="form-input" type="date" id="preferred-date" name="preferred_date" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message or Special Requirements</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Please let us know about any specific health concerns, the number of employees for a corporate camp, or any other requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+              Submit Booking Request
+            </button>
+            <p class="form-privacy">Your information is confidential and used only to process your healthcare enquiry. We will never share your data with third parties.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS MAP SECTION -->
+<section class="section" style="background: var(--bg-secondary);" aria-labelledby="locations-heading">
+  <div class="container">
+    <div class="section-header centered" data-animate>
+      <div class="eyebrow">Our Centres</div>
+      <h2 class="display-md" id="locations-heading">Two Locations in Chennai</h2>
+      <p class="section-desc">Visit either of our fully equipped diagnostic centres, or let us come to you — via mobile unit, workplace camp, or home collection service.</p>
+    </div>
+
+    <div class="locations-grid" data-animate data-delay="2">
+      <div class="location-card">
+        <div class="location-map-placeholder" style="background: url('assets/images/hero-lab.webp') center/cover no-repeat;">
+          <div class="location-map-pin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Anna Nagar</span>
+          </div>
+        </div>
+        <div class="location-body">
+          <h3 class="location-name">Anna Nagar West Centre</h3>
+          <p class="location-address">No. 7, SM Narayana Nagar,<br/>Annanagar West Extension,<br/>Chennai – 600101, Tamil Nadu</p>
+          <div class="location-tags">
+            <span class="location-tag">Health Checkups</span>
+            <span class="location-tag">Diagnostic Lab</span>
+            <span class="location-tag">ECG · Echo</span>
+            <span class="location-tag">X-Ray</span>
+            <span class="location-tag">Ultrasound</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="location-map-placeholder" style="background: url('assets/images/hero-services.webp') center/cover no-repeat;">
+          <div class="location-map-pin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Nungambakkam</span>
+          </div>
+        </div>
+        <div class="location-body">
+          <h3 class="location-name">Nungambakkam Centre</h3>
+          <p class="location-address">No. 105B, Kamarajnagar,<br/>Padikuppam Main Road,<br/>Chennai – 600040, Tamil Nadu</p>
+          <div class="location-tags">
+            <span class="location-tag">Health Checkups</span>
+            <span class="location-tag">Diagnostic Lab</span>
+            <span class="location-tag">Treadmill Test</span>
+            <span class="location-tag">Spirometry</span>
+            <span class="location-tag">Consultation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 40px 44px; margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;" data-animate data-delay="3">
+      <div>
+        <div class="eyebrow" style="margin-bottom: 8px;">NABL Accredited Lab</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 8px;">Ayapakkam Diagnostic Centre</h3>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;">No. 8569, TNHB Ayapakkam, Chennai – 600077, Thiruvallur<br/>NABL Certificate No. NABL-M(EL)T-02461 · Valid until January 2027</p>
+      </div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <span style="font-size: 0.75rem; font-weight: 700; background: #f0fdf4; color: #166534; border-radius: 100px; padding: 8px 16px; border: 1px solid #86efac;">NABL Accredited</span>
+        <span style="font-size: 0.75rem; font-weight: 700; background: rgba(15,76,129,0.06); color: var(--accent); border-radius: 100px; padding: 8px 16px; border: 1px solid rgba(15,76,129,0.15);">ISO 9001:2008</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <div class="section-header centered" data-animate>
+        <div class="eyebrow">Frequently Asked Questions</div>
+        <h2 class="display-md" id="faq-heading">Common Questions</h2>
+        <p class="section-desc">Everything you need to know before your visit. Can't find an answer? Call us at +91 44 2345 6789.</p>
+      </div>
+
+      <div data-animate data-delay="2">
+        <div class="faq-item">
+          <button class="faq-q">
+            How long does a health checkup take?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">A standard executive health checkup typically takes between 2.5 to 4 hours, depending on the package selected. This includes sample collection, all diagnostic tests, physician consultation, and preliminary results discussion. We recommend arriving fasting (no food for 8 hours prior) for accurate metabolic and blood sugar panels.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Can health checkups be done at our office?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. OHC specializes in onsite corporate health camps and can deploy our mobile diagnostic unit directly to your premises. We bring our laboratory equipment, ECG and echo machines, portable X-ray, and medical staff with us. You simply need to provide a suitable space (a large conference room is typically adequate) and we handle the rest.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            How quickly are reports available?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Routine blood and urine reports are typically ready within the same working day. Specialized tests such as culture studies or advanced cardiac panels may take 24–72 hours. All reports are automatically uploaded to our secure online portal (lis.ohcservices.com) and emailed to you upon authorization by our pathologist.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Is home collection available? What is covered?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Yes, we offer home collection for blood samples, urine samples, and ECG. Our certified phlebotomists can visit from 6:00 AM onwards. For more comprehensive home visits including physician consultation and portable diagnostic equipment, please contact us to arrange a custom visit. Home visits are available across Chennai.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Are OHC's labs accredited? How is quality maintained?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">OHC is NABL-accredited (Certificate No. NABL-M(EL)T-02461, valid through January 2027), ISO 9001:2008 certified, and enrolled in the WHO-recognized EQAS program conducted through CMC Vellore and BIORAD. We use fully computerized laboratory systems and independent third-party quality controls to ensure accuracy and reliability on every report we issue.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            What is the minimum group size for a corporate camp?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">We can accommodate groups from as small as 10 employees upwards. For organizations with fewer than 10 participants, we recommend booking individual appointments at one of our centres. For groups of 50 or more, we can arrange a full-day dedicated camp with a customized test panel and on-the-spot consultation with our panel specialists.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Can health checkup packages be customized?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Absolutely. While we offer standard packages (Executive, Master, Overseas, Well Women, Diabetic, Heart Health, and Pre-Employment), every package can be modified to include or exclude specific tests based on your requirements, budget, or industry compliance obligations. Contact our corporate desk for a tailored proposal.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band" style="background: url('assets/images/hero-clinic.webp') center/cover no-repeat;">
+  <div class="container">
+    <div class="cta-band-content" data-animate>
+      <div class="eyebrow cta-band-eyebrow">No Delay Needed</div>
+      <h2 class="cta-band-title">Your Health Can't Wait for Tomorrow</h2>
+      <p class="cta-band-desc">Book a checkup today. Our team will have you scheduled within 24 hours and your reports delivered within the day of your visit.</p>
+      <div class="cta-band-actions">
+        <a href="tel:+914423456789" class="btn btn-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+          Call Now
+        </a>
+        <a href="services.html" class="btn btn-ghost">Browse Checkup Packages</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-mark">OHC</div>
+          <div>
+            <div class="footer-logo-name">OHC Services</div>
+            <div class="footer-tagline">Preventive Healthcare</div>
+          </div>
+        </div>
+        <p class="footer-desc">India's pioneer in mobile and onsite preventive healthcare. Delivering clinical excellence at your center, workplace, or home since inception.</p>
+        <div class="footer-certs">
+          <span class="footer-cert-tag">NABL Accredited</span>
+          <span class="footer-cert-tag">ISO 9001:2008</span>
+          <span class="footer-cert-tag">QCI Member</span>
+          <span class="footer-cert-tag">AERB Licensed</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="services.html" class="footer-link">Our Services</a></li>
+          <li><a href="solutions.html" class="footer-link">Solutions</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="services.html" class="footer-link">Executive Health Checkup</a></li>
+          <li><a href="services.html" class="footer-link">Master Health Checkup</a></li>
+          <li><a href="services.html" class="footer-link">Corporate Wellness</a></li>
+          <li><a href="services.html" class="footer-link">Home Collection</a></li>
+          <li><a href="solutions.html" class="footer-link">Digital Health Records</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>No. 7, SM Narayana Nagar, Annanagar West Extn, Chennai – 600101</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>No. 105B, Kamarajnagar, Padikuppam Main Road, Chennai – 600040</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+          <span>+91 44 2345 6789</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@ohcservices.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 OHC Services. All rights reserved.</span>
+      <span>Medical Director: Dr. G. Karthick — MBBS, DFM, FICM, C.DIAB</span>
+      <div style="display: flex; gap: 20px;">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Contact form submission handler
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const firstName = document.getElementById('first-name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const type = document.getElementById('enquiry-type').value;
+
+    if (!firstName || !phone || !type) {
+      alert('Please fill in all required fields marked with *');
+      return;
+    }
+
+    // Simulate submission
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-success').classList.add('show');
+    document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+</body>
+</html>
