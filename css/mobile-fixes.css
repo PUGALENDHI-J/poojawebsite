@@ -59,23 +59,26 @@
 /* ── Mobile Hero Overhaul (max-width: 768px) ── */
 @media (max-width: 768px) {
   .hero {
-    height: 70vh;
-    min-height: 500px;
+    height: 100vh;
+    min-height: 750px;
   }
   .hero-inner {
-    padding-top: 80px;
+    padding-top: 120px;
+    padding-bottom: 40px;
   }
   .hero-bg::after {
     background: linear-gradient(105deg, rgba(15,23,42,0.25) 30%, rgba(15,23,42,0.1) 100%);
   }
   .hero h1 {
-    font-size: clamp(1.875rem, 6vw, 2.125rem);
+    font-size: 30px;
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.2;
+    max-width: 100%;
   }
   .hero-desc {
-    font-size: 1rem;
-    max-width: 90%;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 95%;
   }
   .hero-actions {
     flex-direction: column;
@@ -89,8 +92,8 @@
     justify-content: center;
   }
   .hero-stats {
-    margin-top: 1.5rem;
-    padding-top: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.25rem;
     gap: 1rem;
   }
   .hero-stat-num {
@@ -98,6 +101,13 @@
   }
   .hero-badge {
     margin-bottom: 0.75rem;
+  }
+}
+
+/* ── Blue marquee strip spacing ── */
+@media (max-width: 768px) {
+  .marquee-band {
+    padding: 0.7rem 0;
   }
 }
 
