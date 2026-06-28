@@ -389,16 +389,72 @@
       .projects-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
       .home-gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .hero { height: 50vh; }
-      .hero h1 { font-size: clamp(1.75rem, 7vw, 3rem); }
-      .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+
+      /* ── Mobile hero fix: clear fixed navbar, prevent clipping of
+             heading/stats, keep stats above the blue marquee strip ── */
+      .hero {
+        height: auto;
+        min-height: 100vh;
+        max-height: none;
+        overflow: visible;
+        align-items: flex-start;
+      }
+      .hero-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        min-height: 100%;
+        box-sizing: border-box;
+        padding-top: 120px;
+        padding-bottom: 40px;
+      }
+      .hero-badge { margin: 0 auto 1.25rem; }
+      .hero h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        max-width: 100%;
+        word-break: normal;
+        overflow-wrap: break-word;
+        margin: 0 auto 1.25rem;
+      }
+      .hero-desc {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 95%;
+        margin: 0 auto 2rem;
+        text-align: center;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+      }
+      .hero-actions .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+      .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem 2rem;
+        width: 100%;
+        margin-top: auto;
+        padding-top: 2rem;
+        margin-bottom: 0;
+      }
     }
     @media (max-width: 576px) {
-      .hero { height: 40vh; min-height: 400px; }
+      .hero { min-height: 105vh; }
       .hero-actions { flex-direction: column; }
       .home-gallery-grid { grid-template-columns: 1fr; }
       .stats-bar-grid { grid-template-columns: repeat(2, 1fr); }
       .invest-metrics { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 400px) {
+      .hero { min-height: 110vh; }
     }
   </style>
 </head>
