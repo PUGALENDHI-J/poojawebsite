@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="POD STAYS Projects — From Yercaud Tamil Nadu to the world. Discover our flagship and upcoming pod resort locations across India.">
+  <title>Projects — POD STAYS | Luxury Pod Resort Chain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <style>
+    /* LOCATIONS PAGE STYLES */
+
+    /* Flagship */
+    .flagship-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 520px; }
+    .flagship-img {
+      background-image: url('images/resort-1.jpg');
+      background-size: cover; background-position: center;
+      position: relative; min-height: 400px;
+    }
+    .flagship-badge {
+      position: absolute; top: 2rem; left: 2rem;
+      background: var(--blue); color: var(--white);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.4rem 1rem; border-radius: 4px;
+    }
+    .flagship-content { padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
+    .flagship-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+    .flagship-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; color: var(--navy); margin-bottom: 1.25rem; line-height: 1.15; }
+    .flagship-desc { font-size: 0.9375rem; color: #4a5568; line-height: 1.8; margin-bottom: 2rem; }
+
+    .location-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    .meta-item { padding: 1rem; background: var(--light-grey); border-radius: 10px; }
+    .meta-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #64748b; margin-bottom: 0.25rem; }
+    .meta-value { font-weight: 600; color: var(--navy); font-size: 0.9375rem; }
+
+    /* Location cards */
+    .locations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .location-card {
+      background: var(--white); border-radius: 18px; overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      border: 1.5px solid #e2e8f0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .location-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(31,78,170,0.12); }
+    .location-card-img {
+      height: 220px;
+      background-size: cover; background-position: center;
+      background-color: var(--navy);
+      position: relative;
+    }
+    .loc-status {
+      position: absolute; top: 1rem; left: 1rem;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem; border-radius: 4px;
+    }
+    .loc-status.operational { background: #22c55e; color: var(--white); }
+    .loc-status.opening { background: var(--blue); color: var(--white); }
+    .loc-status.upcoming { background: rgba(255,255,255,0.9); color: var(--navy); }
+    .loc-status.planned { background: rgba(255,255,255,0.7); color: #64748b; }
+    .location-card-body { padding: 1.5rem; }
+    .location-state { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.35rem; }
+    .location-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: var(--navy); margin-bottom: 0.6rem; }
+    .location-desc { font-size: 0.875rem; color: #4a5568; line-height: 1.7; margin-bottom: 0.75rem; }
+    .location-eta { font-size: 0.78rem; font-weight: 600; color: #64748b; }
+    .location-eta span { color: var(--blue); }
+
+    /* Project type sections */
+    .project-type-section { scroll-margin-top: 80px; }
+    .project-type-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; }
+    .project-type-badge {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--white); background: var(--blue);
+      padding: 0.4rem 1rem; border-radius: 4px;
+    }
+
+    /* Roadmap */
+    .roadmap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .phase-card {
+      background: var(--white); border-radius: 18px; padding: 2rem;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+    .phase-card.active { border-color: var(--blue); }
+    .phase-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; color: rgba(31,78,170,0.15); line-height: 1; margin-bottom: 0.5rem; }
+    .phase-card.active .phase-num { color: var(--blue); opacity: 0.4; }
+    .phase-year { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.35rem; }
+    .phase-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; color: var(--navy); margin-bottom: 0.75rem; }
+    .phase-locs { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .phase-locs li { font-size: 0.875rem; color: #4a5568; display: flex; align-items: center; gap: 0.5rem; }
+    .phase-locs li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; opacity: 0.5; }
+    .phase-count { font-size: 0.75rem; font-weight: 600; color: var(--blue); }
+
+    /* Target regions */
+    .regions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .region-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.875rem; color: #4a5568; }
+    .region-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+
+    @media (max-width: 992px) {
+      .flagship-grid { grid-template-columns: 1fr; }
+      .flagship-img { min-height: 300px; }
+      .flagship-content { padding: 2.5rem; }
+      .locations-grid { grid-template-columns: 1fr 1fr; }
+      .roadmap-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 576px) {
+      .locations-grid { grid-template-columns: 1fr; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .regions-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation">
+  <a href="index.html" class="nav-logo">POD<span>STAYS</span></a>
+  <ul class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="about.html" class="nav-link">About Us</a></li>
+    <li class="nav-item">
+      <a href="pod-models.html" class="nav-link">Pod Models <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="pod-models.html" class="nav-dropdown-item">All Pod Models</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="models/terminal-pods.html" class="nav-dropdown-item">Terminal Pods</a>
+        <a href="models/resort-pods.html" class="nav-dropdown-item">Resort Pods</a>
+        <a href="models/drive-through-pods.html" class="nav-dropdown-item">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="locations.html" class="nav-link active">Projects <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="locations.html" class="nav-dropdown-item">All Projects</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="projects/yercaud.html" class="nav-dropdown-item">Yercaud</a>
+        <a href="projects/coorg.html" class="nav-dropdown-item">Coorg</a>
+        <a href="projects/ooty.html" class="nav-dropdown-item">Ooty</a>
+        <a href="projects/kodaikanal.html" class="nav-dropdown-item">Kodaikanal</a>
+        <a href="projects/munnar.html" class="nav-dropdown-item">Munnar</a>
+        <a href="projects/wayanad.html" class="nav-dropdown-item">Wayanad</a>
+        <a href="projects/chikmagalur.html" class="nav-dropdown-item">Chikmagalur</a>
+        <a href="projects/goa.html" class="nav-dropdown-item">Goa</a>
+      </div>
+    </li>
+    <li><a href="partner.html" class="nav-link">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-link nav-cta">Get Instant Quote</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <button class="nav-mobile-close" id="mobileClose">&#x2715;</button>
+  <ul class="nav-mobile-links">
+    <li><a href="index.html" class="nav-mobile-link">Home</a></li>
+    <li><a href="about.html" class="nav-mobile-link">About Us</a></li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Pod Models</span>
+      <div class="nav-mobile-sub"><a href="pod-models.html">All Pod Models</a><a href="models/terminal-pods.html">Terminal Pods</a><a href="models/resort-pods.html">Resort Pods</a><a href="models/drive-through-pods.html">Drive Through Pods</a></div>
+    </li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Projects</span>
+      <div class="nav-mobile-sub"><a href="locations.html">All Projects</a>
+        <a href="projects/yercaud.html">Yercaud</a>
+        <a href="projects/coorg.html">Coorg</a>
+        <a href="projects/ooty.html">Ooty</a>
+        <a href="projects/kodaikanal.html">Kodaikanal</a>
+        <a href="projects/munnar.html">Munnar</a>
+        <a href="projects/wayanad.html">Wayanad</a>
+        <a href="projects/chikmagalur.html">Chikmagalur</a>
+        <a href="projects/goa.html">Goa</a></div>
+    </li>
+    <li><a href="partner.html" class="nav-mobile-link">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-mobile-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-mobile-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get Instant Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/resort-2.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-label">From Tamil Nadu to the World</div>
+    <h1 class="page-hero-title">Where POD STAYS<br><em>Takes Root</em></h1>
+  </div>
+</section>
+
+<!-- FLAGSHIP -->
+<section id="resort" class="project-type-section">
+  <div class="flagship-grid">
+    <div class="flagship-img">
+      <div class="flagship-badge">Flagship Property</div>
+    </div>
+    <div class="flagship-content" data-reveal="fade-left">
+      <div class="flagship-label">Current Location — Phase 01</div>
+      <h2 class="flagship-title">Yercaud,<br>Tamil Nadu</h2>
+      <p class="flagship-desc">Nestled in the Shevaroy Hills of the Eastern Ghats, Yercaud sets the gold standard for what POD STAYS represents — pristine nature, architectural elegance, and luxury without excess. Our flagship property is where the vision becomes reality.</p>
+      <div class="location-meta">
+        <div class="meta-item"><div class="meta-label">Altitude</div><div class="meta-value">1,515m above sea level</div></div>
+        <div class="meta-item"><div class="meta-label">Status</div><div class="meta-value">Operational</div></div>
+        <div class="meta-item"><div class="meta-label">Pod Capacity</div><div class="meta-value">Multiple Models</div></div>
+        <div class="meta-item"><div class="meta-label">Access</div><div class="meta-value">275 km from Chennai</div></div>
+      </div>
+      <a href="projects/yercaud.html" class="btn-primary">Explore Yercaud</a>
+    </div>
+  </div>
+</section>
+
+<!-- ALL PROJECTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow">Expanding Fast</div>
+      <h2 class="section-title">Next on the <em>Map</em></h2>
+      <p class="section-desc">South India's most breathtaking landscapes are being scouted for POD STAYS's next chapters — from misty hill stations to serene coastlines.</p>
+    </div>
+    <div class="locations-grid" data-stagger>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/resort-3.jpg');">
+          <div class="loc-status opening">Opening Soon</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Tamil Nadu</div>
+          <div class="location-name">Ooty</div>
+          <p class="location-desc">The Queen of Hill Stations. Rolling tea estates, colonial heritage, and misty mornings — the perfect POD STAYS canvas.</p>
+          <div class="location-eta">ETA: <span>Q3 2026</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/resort-4.jpg');">
+          <div class="loc-status opening">Opening Soon</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Tamil Nadu</div>
+          <div class="location-name">Kodaikanal</div>
+          <p class="location-desc">The Princess of Hill Stations. Perched at 2,133m, Kodaikanal promises cloud-level luxury and pristine Palani landscapes.</p>
+          <div class="location-eta">ETA: <span>Q4 2026</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/resort-5.jpg');">
+          <div class="loc-status upcoming">2027</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Kerala</div>
+          <div class="location-name">Wayanad</div>
+          <p class="location-desc">Kerala's last great wilderness. Waterfalls, tribal heritage, and biodiversity that sets it apart from any other Indian landscape.</p>
+          <div class="location-eta">ETA: <span>Q1 2027</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/resort-6.jpg');">
+          <div class="loc-status upcoming">2027</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Karnataka</div>
+          <div class="location-name">Coorg</div>
+          <p class="location-desc">Scotland of India. Coffee plantations, river valleys, and a culture of warmth — Coorg is nature luxury at its most refined.</p>
+          <div class="location-eta">ETA: <span>Q2 2027</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/resort-7.jpg');">
+          <div class="loc-status upcoming">2027</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Andhra Pradesh</div>
+          <div class="location-name">Araku Valley</div>
+          <p class="location-desc">A hidden Andhra gem. Tribal culture, award-winning coffee, and dramatic gorge landscapes most Indians haven't discovered yet.</p>
+          <div class="location-eta">ETA: <span>Q3 2027</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/resort-1.jpg');">
+          <div class="loc-status planned">Planned</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Kerala</div>
+          <div class="location-name">Munnar</div>
+          <p class="location-desc">Endless tea gardens at 1,600m. Munnar's emerald hills and cool climate are the natural counterpart to POD STAYS's design philosophy.</p>
+          <div class="location-eta">ETA: <span>2027–28</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMINAL PROJECTS -->
+<section id="terminal" class="section project-type-section" style="background:var(--light-grey);">
+  <div class="container">
+    <div class="project-type-header" data-reveal="fade-up">
+      <div>
+        <div class="section-eyebrow">Airport & Transit Hubs</div>
+        <h2 class="section-title">Terminal <em>Projects</em></h2>
+      </div>
+      <div class="project-type-badge">Transit Hospitality</div>
+    </div>
+    <div class="locations-grid" data-stagger>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/pod-1.jpg');">
+          <div class="loc-status planning">Planning</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Tamil Nadu</div>
+          <div class="location-name">Chennai Airport Terminal</div>
+          <p class="location-desc">Luxury transit pods for layover travelers at Chennai International Airport, redefining airport hospitality in South India.</p>
+          <div class="location-eta">ETA: <span>2027</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/pod-2.jpg');">
+          <div class="loc-status planned">Planned</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Karnataka</div>
+          <div class="location-name">Bengaluru Airport Hub</div>
+          <p class="location-desc">Premium sleep pods within Kempegowda International Airport, designed for business travelers and transit passengers.</p>
+          <div class="location-eta">ETA: <span>2027–28</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/pod-3.jpg');">
+          <div class="loc-status planned">Planned</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Telangana</div>
+          <div class="location-name">Hyderabad Airport</div>
+          <p class="location-desc">State-of-the-art transit pods at Rajiv Gandhi International Airport offering world-class rest facilities for long-haul travelers.</p>
+          <div class="location-eta">ETA: <span>2028</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DRIVE THROUGH PROJECTS -->
+<section id="drivethrough" class="section project-type-section">
+  <div class="container">
+    <div class="project-type-header" data-reveal="fade-up">
+      <div>
+        <div class="section-eyebrow">Highway & Expressway</div>
+        <h2 class="section-title">Drive Through <em>Projects</em></h2>
+      </div>
+      <div class="project-type-badge">Highway Hospitality</div>
+    </div>
+    <div class="locations-grid" data-stagger>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/pod-orange.jpg');">
+          <div class="loc-status opening">Opening Soon</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Tamil Nadu</div>
+          <div class="location-name">Chennai–Bangalore Highway</div>
+          <p class="location-desc">Premium drive-through pod rest stops on the NH44 corridor — redefining highway hospitality for long-distance travelers.</p>
+          <div class="location-eta">ETA: <span>Q4 2026</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/pod-apple.jpg');">
+          <div class="loc-status upcoming">2027</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Tamil Nadu</div>
+          <div class="location-name">Salem Bypass</div>
+          <p class="location-desc">Strategic drive-through pod cluster at Salem, the gateway to Tamil Nadu's hill stations, serving millions of annual travelers.</p>
+          <div class="location-eta">ETA: <span>Q1 2027</span></div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-img" style="background-image:url('images/pod-4.jpg');">
+          <div class="loc-status planned">Planned</div>
+        </div>
+        <div class="location-card-body">
+          <div class="location-state">Kerala</div>
+          <div class="location-name">Kochi–Coimbatore Corridor</div>
+          <p class="location-desc">Luxury highway pods along the key intercity route connecting Kerala's commercial capital with Tamil Nadu's technology hub.</p>
+          <div class="location-eta">ETA: <span>2027–28</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPANSION ROADMAP -->
+<section class="section" style="background:var(--light-grey);">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow">Strategic Growth</div>
+      <h2 class="section-title">The POD STAYS <em>Expansion Map</em></h2>
+      <p class="section-desc">Four phases. One unstoppable vision.</p>
+    </div>
+    <div class="roadmap-grid" data-stagger>
+      <div class="phase-card active">
+        <div class="phase-num">01</div>
+        <div class="phase-year">2024 – 2025</div>
+        <div class="phase-name">Tamil Nadu Launch</div>
+        <ul class="phase-locs">
+          <li>Yercaud — Flagship</li>
+          <li>Ooty</li>
+          <li>Kodaikanal</li>
+          <li>Yelagiri</li>
+        </ul>
+        <div class="phase-count">4 Locations</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">02</div>
+        <div class="phase-year">2026 – 2027</div>
+        <div class="phase-name">South India</div>
+        <ul class="phase-locs">
+          <li>Wayanad, Kerala</li>
+          <li>Coorg, Karnataka</li>
+          <li>Araku Valley, AP</li>
+          <li>Munnar, Kerala</li>
+        </ul>
+        <div class="phase-count">8+ Locations</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">03</div>
+        <div class="phase-year">2027 – 2029</div>
+        <div class="phase-name">Pan India</div>
+        <ul class="phase-locs">
+          <li>Himachal Pradesh</li>
+          <li>Uttarakhand</li>
+          <li>Rajasthan</li>
+          <li>Goa, Maharashtra</li>
+        </ul>
+        <div class="phase-count">20+ Locations</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">04</div>
+        <div class="phase-year">2029 &amp; Beyond</div>
+        <div class="phase-name">International</div>
+        <ul class="phase-locs">
+          <li>Sri Lanka</li>
+          <li>Bhutan</li>
+          <li>Maldives</li>
+          <li>Southeast Asia</li>
+        </ul>
+        <div class="phase-count">50+ Locations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL VISION -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="global-split">
+      <div data-reveal="fade-right">
+        <div class="section-eyebrow">The Grand Vision</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">Every <em>extraordinary landscape</em><br>deserves a POD STAYS</h2>
+        <p style="font-size:0.9375rem;color:#4a5568;line-height:1.8;margin-bottom:2rem;">Our expansion is guided by a simple principle: go where nature is most breathtaking and where luxury infrastructure is most absent. We seek underserved beauty — and transform it with world-class modular architecture.</p>
+        <div class="regions-grid">
+          <div class="region-item"><div class="region-dot"></div>South India (Active)</div>
+          <div class="region-item"><div class="region-dot"></div>North India (2027)</div>
+          <div class="region-item"><div class="region-dot"></div>East India (2028)</div>
+          <div class="region-item"><div class="region-dot"></div>West India (2028)</div>
+          <div class="region-item"><div class="region-dot"></div>South Asia (2029)</div>
+          <div class="region-item"><div class="region-dot"></div>International (2030+)</div>
+        </div>
+      </div>
+      <div data-reveal="fade-left">
+        <div style="background:var(--navy);border-radius:18px;padding:3rem;text-align:center;">
+          <div style="font-family:var(--font-display);font-size:5rem;font-weight:500;color:var(--white);line-height:1;margin-bottom:0.5rem;">50+</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.6);margin-bottom:2.5rem;">Locations by 2030</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+            <div style="text-align:left;padding:1.25rem;background:rgba(255,255,255,0.05);border-radius:12px;">
+              <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:500;color:var(--white);">4</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.25rem;">States Active</div>
+            </div>
+            <div style="text-align:left;padding:1.25rem;background:rgba(255,255,255,0.05);border-radius:12px;">
+              <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:500;color:var(--white);">500+</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.25rem;">Pods by 2029</div>
+            </div>
+            <div style="text-align:left;padding:1.25rem;background:rgba(255,255,255,0.05);border-radius:12px;">
+              <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:500;color:var(--white);">6</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.25rem;">Countries by 2030</div>
+            </div>
+            <div style="text-align:left;padding:1.25rem;background:rgba(255,255,255,0.05);border-radius:12px;">
+              <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:500;color:var(--white);">28%</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.25rem;">Sector CAGR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-cta">
+  <div class="container" style="text-align:center;" data-reveal="fade-up">
+    <div class="section-eyebrow section-eyebrow--center" style="color:rgba(255,255,255,0.6);">Secure Your Territory</div>
+    <h2 class="section-title section-title--center" style="color:var(--white);">Claim a Location<br><em>Before It's Gone</em></h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.9375rem;max-width:520px;margin:1rem auto 2.5rem;line-height:1.8;">Partner locations are allocated on a first-come basis. Secure your preferred destination today and become part of India's fastest-growing luxury hospitality brand.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="partner.html" class="btn-primary">Become a Partner</a>
+      <a href="contact.html" class="btn-outline-white">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">POD<span>STAYS</span></div>
+        <p class="footer-desc">India's first luxury pod resort chain — redefining experiential stays worldwide.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="pod-models.html" class="footer-link">Pod Models</a></li>
+          <li><a href="locations.html" class="footer-link">Projects</a></li>
+          <li><a href="partner.html" class="footer-link">Services</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Projects</div>
+        <ul class="footer-links">
+          <li><a href="locations.html" class="footer-link">All Projects</a></li>
+          <li><a href="locations.html#terminal" class="footer-link">Terminal Projects</a></li>
+          <li><a href="locations.html#resort" class="footer-link">Resort Projects</a></li>
+          <li><a href="locations.html#drivethrough" class="footer-link">Drive Through Projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>
+          <a href="tel:+919994048360" style="color:inherit;">+91 9994048360</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Yercaud, Tamil Nadu, India</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:pod-staysretreat@gmail.com" style="color:inherit;">pod-staysretreat@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 POD STAYS. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919994048360" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<style>
+  @media (max-width: 992px) { .global-split { grid-template-columns: 1fr !important; } }
+</style>
+
+<script src="js/main.js" defer></script>
+<script src="js/navigation.js" defer></script>
+<script src="js/animation.js" defer></script>
+</body>
+</html>

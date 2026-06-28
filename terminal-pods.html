@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="refresh" content="0;url=models/terminal-pods.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terminal Pods by POD STAYS — Compact, high-throughput pod accommodations for airports, bus terminals, and transit hubs." />
+  <title>Terminal Pods — POD STAYS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <style>
+    .overview-layout { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+    .overview-img { width:100%; height:420px; object-fit:cover; border-radius:var(--radius-lg); }
+    .applications-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem; }
+    .application-item { background:var(--light-grey); border-radius:var(--radius-md); padding:1.5rem; }
+    .application-title { font-weight:600; color:var(--navy); margin-bottom:0.4rem; font-size:0.95rem; }
+    .application-desc { font-size:0.83rem; color:var(--text-muted); line-height:1.65; }
+    @media(max-width:992px){.overview-layout{grid-template-columns:1fr;}.applications-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:576px){.applications-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation">
+  <a href="index.html" class="nav-logo">POD<span>STAYS</span></a>
+  <ul class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="about.html" class="nav-link">About Us</a></li>
+    <li class="nav-item">
+      <a href="pod-models.html" class="nav-link active">Pod Models <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="pod-models.html" class="nav-dropdown-item">All Pod Models</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="terminal-pods.html" class="nav-dropdown-item active">Terminal Pods</a>
+        <a href="resort-pods.html" class="nav-dropdown-item">Resort Pods</a>
+        <a href="drive-through-pods.html" class="nav-dropdown-item">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="locations.html" class="nav-link">Projects <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="locations.html" class="nav-dropdown-item">All Projects</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="locations.html#terminal" class="nav-dropdown-item">Terminal Projects</a>
+        <a href="locations.html#resort" class="nav-dropdown-item">Resort Projects</a>
+        <a href="locations.html#drivethrough" class="nav-dropdown-item">Drive Through Projects</a>
+      </div>
+    </li>
+    <li><a href="partner.html" class="nav-link">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-link nav-cta">Get Instant Quote</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <button class="nav-mobile-close" id="mobileClose">&#x2715;</button>
+  <ul class="nav-mobile-links">
+    <li><a href="index.html" class="nav-mobile-link">Home</a></li>
+    <li><a href="about.html" class="nav-mobile-link">About Us</a></li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Pod Models</span>
+      <div class="nav-mobile-sub"><a href="pod-models.html">All Pod Models</a><a href="terminal-pods.html">Terminal Pods</a><a href="resort-pods.html">Resort Pods</a><a href="drive-through-pods.html">Drive Through Pods</a></div>
+    </li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Projects</span>
+      <div class="nav-mobile-sub"><a href="locations.html">All Projects</a><a href="locations.html#terminal">Terminal Projects</a></div>
+    </li>
+    <li><a href="partner.html" class="nav-mobile-link">Services</a></li>
+    <li><a href="contact.html" class="nav-mobile-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get Instant Quote</a>
+</div>
+
+<!-- Hero Banner -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/pod-tunnel.jpg')"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-label">Pod Models — Transit Hospitality</div>
+    <h1>Terminal Pods</h1>
+    <p>High-throughput modular accommodations engineered for airports, railway stations, and bus terminals.</p>
+  </div>
+</div>
+
+<!-- Overview -->
+<section class="section">
+  <div class="container">
+    <div class="overview-layout">
+      <div data-reveal="slide-left">
+        <span class="section-label">Overview</span>
+        <h2 class="section-title">Precision-Built for Transit Environments</h2>
+        <p style="color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Terminal Pods are compact, efficient pod units designed to maximize guest throughput in high-traffic transit locations. German-engineered for durability, acoustic insulation, and ease of maintenance — delivering a premium rest experience even in the busiest environments.</p>
+        <ul class="feature-list">
+          <li class="feature-item"><span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Acoustic insulation for noise-free sleep</li>
+          <li class="feature-item"><span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Biometric lock and digital check-in</li>
+          <li class="feature-item"><span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integrated climate control</li>
+          <li class="feature-item"><span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>High-speed Wi-Fi and USB charging</li>
+          <li class="feature-item"><span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Premium mattress and bedding</li>
+          <li class="feature-item"><span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Shared or private bathroom options</li>
+        </ul>
+      </div>
+      <div data-reveal="slide-right">
+        <img src="images/pod-sleeping.jpg" alt="Terminal Pod Interior" class="overview-img" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Specifications -->
+<section class="section section--grey">
+  <div class="container">
+    <div data-reveal><span class="section-label">Specifications</span><h2 class="section-title">Technical Specifications</h2></div>
+    <div style="margin-top:2rem;background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);" data-reveal>
+      <table class="specs-table">
+        <thead><tr><th>Specification</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Pod Dimensions</td><td>60–120 sq ft (5.6–11.1 sqm)</td></tr>
+          <tr><td>Occupancy</td><td>1–2 guests per pod</td></tr>
+          <tr><td>Booking Duration</td><td>Hourly (minimum 4 hrs) to overnight (max 24 hrs)</td></tr>
+          <tr><td>Construction</td><td>German EPS sandwich panel, powder-coated steel frame</td></tr>
+          <tr><td>Insulation</td><td>Thermal + acoustic insulation, STC 50+</td></tr>
+          <tr><td>Power</td><td>220V/50Hz, 6 USB charging ports, surge protection</td></tr>
+          <tr><td>Climate Control</td><td>Individual A/C unit, thermostat-controlled</td></tr>
+          <tr><td>Connectivity</td><td>Dedicated high-speed Wi-Fi per pod</td></tr>
+          <tr><td>Security</td><td>Biometric + PIN access, CCTV integration</td></tr>
+          <tr><td>Deployment Time</td><td>3–4 months from order confirmation</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section">
+  <div class="container">
+    <div data-reveal><span class="section-label">Gallery</span><h2 class="section-title">Terminal Pod Gallery</h2></div>
+    <div class="gallery-grid" style="margin-top:2rem;" data-stagger>
+      <div class="gallery-item"><img src="images/pod-12.jpg" alt="Terminal Pod" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-15.jpg" alt="Terminal Pod Interior" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-sleeping.jpg" alt="Pod Sleeping Area" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-dormitory.jpg" alt="Pod Dormitory" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Applications -->
+<section class="section section--grey">
+  <div class="container">
+    <div data-reveal><span class="section-label">Applications</span><h2 class="section-title">Where Terminal Pods Excel</h2></div>
+    <div class="applications-grid" data-stagger>
+      <div class="application-item">
+        <div class="application-title">International Airports</div>
+        <p class="application-desc">Perfect for layovers, flight delays, and early departures. Position within or adjacent to departure terminals for maximum convenience.</p>
+      </div>
+      <div class="application-item">
+        <div class="application-title">Railway Stations</div>
+        <p class="application-desc">Serve overnight rail travellers and waiting passengers at major railway junctions and long-distance train hubs.</p>
+      </div>
+      <div class="application-item">
+        <div class="application-title">Bus Terminals</div>
+        <p class="application-desc">Intercity bus terminals with overnight or multi-hour connections benefit significantly from compact pod accommodations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto;">
+      <div data-reveal><span class="section-label">FAQ</span><h2 class="section-title">Common Questions</h2></div>
+      <div style="margin-top:2rem;" data-reveal>
+        <div class="faq-item open">
+          <div class="faq-question">What is the minimum booking duration? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Terminal pods can be booked for a minimum of 4 hours, making them ideal for short layovers and transit rest. Full overnight bookings (up to 24 hours) are also available.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How is hygiene maintained between guests? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Each pod undergoes a full sanitization protocol after every checkout, including UV-C light treatment, professional linen replacement, and surface disinfection compliant with international hospitality standards.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the investment required to deploy terminal pods? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Terminal pod deployments begin from ₹60L for a minimum cluster of 8 pods. Investment scales with pod count. Contact our franchise team for a site-specific proposal.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can terminal pods be expanded after initial deployment? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. The modular design allows incremental expansion. Additional pod units can be deployed alongside existing installations without disrupting operations, typically within 4–6 weeks per expansion phase.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enquiry Form -->
+<section class="section section--grey">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;">
+      <div data-reveal style="text-align:center;"><span class="section-label">Get in Touch</span><h2 class="section-title">Enquire About Terminal Pods</h2><p style="color:var(--text-muted);margin-bottom:2rem;">Submit your details and our franchise team will contact you within 24 hours.</p></div>
+      <form class="enquiry-form" data-reveal>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" placeholder="Your full name"></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 98765 43210"></div>
+          <div class="form-group"><label class="form-label">Proposed Location</label><input type="text" class="form-input" placeholder="City / Terminal name"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Investment Range</label>
+          <select class="form-select">
+            <option>Select investment range</option>
+            <option>₹60L – ₹1 Cr</option>
+            <option>₹1 Cr – ₹3 Cr</option>
+            <option>₹3 Cr – ₹6 Cr</option>
+            <option>Above ₹6 Cr</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us about your location and requirements..."></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Related Models -->
+<section class="section">
+  <div class="container">
+    <div data-reveal><span class="section-label">Related Models</span><h2 class="section-title">Explore Other Pod Types</h2></div>
+    <div class="related-grid" style="margin-top:2rem;" data-stagger>
+      <div class="card"><img src="images/resort-1.jpg" alt="Resort Pods" class="card-img" loading="lazy"><div class="card-body"><div class="card-label">Luxury Getaway</div><div class="card-title">Resort Pods</div><p class="card-desc">Premium holiday escapes for hills and nature destinations.</p><a href="resort-pods.html" class="card-link">Learn More &rarr;</a></div></div>
+      <div class="card"><img src="images/pod-orange.jpg" alt="Drive Through Pods" class="card-img" loading="lazy"><div class="card-body"><div class="card-label">Highway Hospitality</div><div class="card-title">Drive Through Pods</div><p class="card-desc">Purpose-built for national highways and road travellers.</p><a href="drive-through-pods.html" class="card-link">Learn More &rarr;</a></div></div>
+      <div class="card"><img src="images/models-hero.jpg" alt="All Pod Models" class="card-img" loading="lazy"><div class="card-body"><div class="card-label">Full Portfolio</div><div class="card-title">All Pod Models</div><p class="card-desc">View our complete range of pod configurations and designs.</p><a href="pod-models.html" class="card-link">View All &rarr;</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="container">
+    <div class="cta-inner" data-reveal>
+      <h2>Ready to Deploy Terminal Pods?</h2>
+      <p>Connect with our team for a site assessment, financial model, and deployment timeline specific to your location.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
+        <a href="partner.html" class="btn btn-white">Franchise Overview</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer"><div class="container">
+  <div class="footer-top">
+    <div><div class="footer-logo">POD<span>STAYS</span></div><p class="footer-brand-desc">India's first luxury modular pod resort chain.</p></div>
+    <div><div class="footer-col-title">Pod Models</div><ul class="footer-links"><li><a href="pod-models.html">All Pod Models</a></li><li><a href="terminal-pods.html">Terminal Pods</a></li><li><a href="resort-pods.html">Resort Pods</a></li><li><a href="drive-through-pods.html">Drive Through Pods</a></li></ul></div>
+    <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="locations.html">Projects</a></li><li><a href="partner.html">Services</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div><div class="footer-col-title">Contact</div><div class="footer-contact-item"><a href="tel:+919876543210">+91 98765 43210</a></div><div class="footer-contact-item"><a href="mailto:info@podstays.in">info@podstays.in</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2025 POD STAYS. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+</div></footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script src="js/navigation.js"></script>
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){x.target.classList.add('revealed');obs.unobserve(x.target);} }),{threshold:0.1,rootMargin:'0px 0px -48px 0px'});
+  document.querySelectorAll('[data-reveal],[data-stagger]').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

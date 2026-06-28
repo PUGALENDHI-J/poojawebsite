@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zenora Retreat Yercaud — Luxury Pod Resort in Tamil Nadu. Nestled at 1,515 metres above sea level in the Shevaroy Hills, Yercaud is the crown jewel of Tamil Nadu's eco-tourism be..." />
+  <title>Yercaud — POD STAYS | Luxury Pod Resort Tamil Nadu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/mobile-fixes.css">
+  <style>
+    .project-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 1.5rem 0; }
+    .project-highlights li { font-size: 0.875rem; color: var(--text-body); padding: 0.5rem 0.75rem; background: var(--light-grey); border-radius: 6px; list-style: none; }
+    .invest-table { width: 100%; border-collapse: collapse; }
+    .invest-table tr { border-bottom: 1px solid var(--border); }
+    .invest-table td { padding: 0.85rem 0; font-size: 0.9rem; }
+    .invest-table td:first-child { color: var(--text-muted); }
+    .invest-table td:last-child { font-weight: 700; color: var(--navy); text-align: right; }
+    .invest-table .highlight td:last-child { color: var(--blue); font-size: 1.05rem; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+    .gallery-grid .gallery-img { width: 100%; height: 280px; object-fit: cover; border-radius: 14px; }
+    .gallery-grid .gallery-img:first-child { grid-column: span 2; height: 340px; }
+    .benefits-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .benefits-list li { font-size: 0.9375rem; color: var(--text-body); padding: 0.75rem 1rem; background: rgba(31,78,170,0.05); border-left: 3px solid var(--blue); border-radius: 0 8px 8px 0; }
+    .nearby-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .nearby-card { display: block; background: var(--light-grey); border-radius: 12px; padding: 1.25rem 1.5rem; border: 1.5px solid var(--border); transition: all 0.2s; text-decoration: none; }
+    .nearby-card:hover { border-color: var(--blue); background: white; transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .nearby-card-name { font-weight: 700; color: var(--navy); font-size: 1rem; margin-bottom: 0.3rem; }
+    .nearby-card-link { font-size: 0.8rem; color: var(--blue); font-weight: 600; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group.full { grid-column: span 2; }
+    .form-label { font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+    .form-input, .form-select, .form-textarea { padding: 0.75rem 1rem; border: 1.5px solid var(--border); border-radius: 8px; font-family: var(--font-body); font-size: 0.9rem; color: var(--text-body); background: var(--light-grey); transition: border-color 0.2s; width: 100%; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--blue); background: white; }
+    .form-textarea { min-height: 100px; resize: vertical; }
+    .badge-green { background: #22c55e; color: white; }
+    .badge-blue { background: var(--blue); color: white; }
+    .badge-grey { background: var(--light-grey); color: var(--text-muted); border: 1px solid var(--border); }
+    .badge { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.28rem 0.7rem; border-radius: 4px; }
+    @media (max-width: 768px) {
+      .project-highlights { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid .gallery-img:first-child { grid-column: span 1; height: 220px; }
+      .gallery-grid .gallery-img { height: 200px; }
+      .nearby-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">POD<span>STAYS</span></a>
+  <ul class="nav-menu">
+    <li><a href="../index.html" class="nav-link">Home</a></li>
+    <li><a href="../about.html" class="nav-link">About Us</a></li>
+    <li class="nav-item">
+      <a href="../pod-models.html" class="nav-link">Pod Models <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="../pod-models.html" class="nav-dropdown-item">All Pod Models</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="../models/terminal-pods.html" class="nav-dropdown-item">Terminal Pods</a>
+        <a href="../models/resort-pods.html" class="nav-dropdown-item">Resort Pods</a>
+        <a href="../models/drive-through-pods.html" class="nav-dropdown-item">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="../locations.html" class="nav-link active">Projects <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="../locations.html" class="nav-dropdown-item">All Projects</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="yercaud.html" class="nav-dropdown-item">Yercaud</a>
+        <a href="coorg.html" class="nav-dropdown-item">Coorg</a>
+        <a href="ooty.html" class="nav-dropdown-item">Ooty</a>
+        <a href="kodaikanal.html" class="nav-dropdown-item">Kodaikanal</a>
+        <a href="munnar.html" class="nav-dropdown-item">Munnar</a>
+        <a href="wayanad.html" class="nav-dropdown-item">Wayanad</a>
+        <a href="chikmagalur.html" class="nav-dropdown-item">Chikmagalur</a>
+        <a href="goa.html" class="nav-dropdown-item">Goa</a>
+      </div>
+    </li>
+    <li><a href="../partner.html" class="nav-link">Partner With Us</a></li>
+    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <a href="../contact.html" class="btn btn-primary nav-cta" style="font-size:0.8rem;padding:0.6rem 1.25rem;">Get Brochure</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" id="mobileClose" aria-label="Close menu">&#x2715;</button>
+  <ul class="nav-mobile-links">
+    <li><a href="../index.html" class="nav-mobile-link">Home</a></li>
+    <li><a href="../about.html" class="nav-mobile-link">About Us</a></li>
+    <li class="nav-mobile-item">
+      <span class="nav-mobile-link nav-mobile-toggle">Pod Models <span class="nav-mobile-arrow">&#8250;</span></span>
+      <div class="nav-mobile-sub">
+        <a href="../pod-models.html">All Pod Models</a>
+        <a href="../models/terminal-pods.html">Terminal Pods</a>
+        <a href="../models/resort-pods.html">Resort Pods</a>
+        <a href="../models/drive-through-pods.html">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-mobile-item">
+      <span class="nav-mobile-link nav-mobile-toggle">Projects <span class="nav-mobile-arrow">&#8250;</span></span>
+      <div class="nav-mobile-sub">
+        <a href="../locations.html">All Projects</a>
+        <a href="yercaud.html">Yercaud</a>
+        <a href="coorg.html">Coorg</a>
+        <a href="ooty.html">Ooty</a>
+        <a href="kodaikanal.html">Kodaikanal</a>
+        <a href="munnar.html">Munnar</a>
+        <a href="wayanad.html">Wayanad</a>
+        <a href="chikmagalur.html">Chikmagalur</a>
+        <a href="goa.html">Goa</a>
+      </div>
+    </li>
+    <li><a href="../partner.html" class="nav-mobile-link">Partner With Us</a></li>
+    <li><a href="../contact.html" class="nav-mobile-link">Contact</a></li>
+  </ul>
+  <a href="../contact.html" class="nav-mobile-cta">Get Brochure</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('../images/yercaud-flagship.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="container">
+      <div class="page-hero-label">Tamil Nadu · India's First Zenora Retreat</div>
+      <h1 class="page-hero-title">Zenora Retreat<br><em>Yercaud</em></h1>
+      <div class="page-hero-sub">Nestled at 1,515 metres above sea level in the Shevaroy Hills, Yercaud is the crown jewel of Tamil Nadu's eco-tourism belt. Our flagship Zen...</div>
+      <div style="margin-top:1.5rem;">
+        <span class="badge badge-green">Flagship · Active</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="split-grid">
+      <div data-reveal="slide-left">
+        <span class="section-label">Project Overview</span>
+        <h2 class="section-title">Zenora Retreat<br><em>Yercaud</em></h2>
+        <p class="section-desc" style="margin-bottom:1.5rem;">Nestled at 1,515 metres above sea level in the Shevaroy Hills, Yercaud is the crown jewel of Tamil Nadu's eco-tourism belt. Our flagship Zenora Retreat here is India's first luxury pod resort — featuring 9+ pod models, a swimming pool, restaurant, banquet hall, games lounge, and a micro power station for complete off-grid operation.</p>
+        <ul class="project-highlights">
+              <li>✓ 9+ Pod Stay Models</li>
+              <li>✓ Swimming Pool & Café</li>
+              <li>✓ Restaurant & Banquet Hall</li>
+              <li>✓ App-Based Operations</li>
+              <li>✓ Off-Grid Solar Power</li>
+              <li>✓ 4.5km from Yercaud Lake</li>
+        </ul>
+        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="../contact.html" class="btn btn-primary">Enquire Now</a>
+          <a href="../partner.html" class="btn btn-outline">Become a Partner</a>
+        </div>
+      </div>
+      <div data-reveal="slide-right">
+        <img src="../images/yercaud-flagship.jpg" alt="Zenora Retreat Yercaud" style="width:100%;height:420px;object-fit:cover;border-radius:18px;" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section--grey" style="padding-top:0;">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:1.5rem;">Yercaud <em>Gallery</em></h2>
+    <div class="gallery-grid">
+          <img src="../images/resort-1.jpg" alt="Yercaud Pod Resort" class="gallery-img" loading="lazy">
+          <img src="../images/resort-4.jpg" alt="Yercaud Pod Resort" class="gallery-img" loading="lazy">
+          <img src="../images/yercaud-flagship.jpg" alt="Yercaud Pod Resort" class="gallery-img" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION BENEFITS -->
+<section class="section">
+  <div class="container">
+    <div class="split-grid">
+      <div data-reveal="fade">
+        <span class="section-label">Why Yercaud</span>
+        <h2 class="section-title">Location <em>Advantages</em></h2>
+        <ul class="benefits-list" style="margin-top:1.5rem;">
+              <li>🌿 Year-round cool climate 18–25°C</li>
+              <li>🌿 160km from Chennai — ideal weekend drive</li>
+              <li>🌿 Peak-season occupancy 90%+</li>
+              <li>🌿 Unmet luxury demand — no organized pod resort currently</li>
+              <li>🌿 Established tourist base with 3L+ annual visitors</li>
+        </ul>
+      </div>
+      <div data-reveal="fade">
+        <img src="../images/resort-4.jpg" alt="Yercaud landscape" style="width:100%;height:380px;object-fit:cover;border-radius:18px;" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POD MODELS -->
+<section class="section section--grey">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;" data-reveal="fade">
+      <span class="section-label">Pod Models at Yercaud</span>
+      <h2 class="section-title section-title--center">Available <em>Stay Experiences</em></h2>
+      <p class="section-desc" style="margin:0 auto;text-align:center;">From intimate dome pods to presidential villas, every guest segment is served at Zenora Yercaud.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;" data-stagger>
+      <div class="card">
+        <img src="../images/pod-dome.jpg" alt="Dome Pod" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
+        <div style="padding:1.25rem;">
+          <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:0.4rem;">Dome Pod</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);">Iconic arched design, private timber deck and panoramic nature views.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../images/pod-villa.jpg" alt="Villa Pod" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
+        <div style="padding:1.25rem;">
+          <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:0.4rem;">Villa Pod</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);">Two-storey luxury villa with full living spaces and private outdoor area.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../images/model-presidential.jpg" alt="Presidential Pod" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
+        <div style="padding:1.25rem;">
+          <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:0.4rem;">Presidential Pod</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);">Elevated structure with private swimming pool and luxury modular interior.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="../pod-models.html" class="btn btn-outline">View All 9+ Pod Models</a>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="section section--navy">
+  <div class="container">
+    <div class="split-grid">
+      <div data-reveal="slide-left">
+        <span class="section-label" style="color:rgba(255,255,255,0.5);">Investment Opportunity</span>
+        <h2 class="section-title" style="color:white;">Own a Resort in <em style="color:#93C5FD;">Yercaud</em></h2>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.9375rem;line-height:1.8;margin-bottom:2rem;">Partner with Zenora through our FOCO model — bring land and capital, we build, brand, and operate. You invest, and earn passive income.</p>
+        <a href="../partner.html" class="btn btn-white" style="margin-right:1rem;">Become a Partner</a>
+        <a href="../contact.html" class="btn btn-outline-white">Talk to Team</a>
+      </div>
+      <div data-reveal="slide-right">
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:2rem;">
+          <table class="invest-table" style="color:white;">
+            <tr class="highlight"><td>Investment Range</td><td>₹60L – 2Cr</td></tr>
+            <tr class="highlight"><td>Annual ROI</td><td>30–38%</td></tr>
+            <tr><td>Payback Period</td><td>4.5–6 Years</td></tr>
+            <tr><td>Pod Capacity</td><td>20–40 Pods</td></tr>
+            <tr><td>Location</td><td>Yercaud, Tamil Nadu</td></tr>
+            <tr><td>Business Model</td><td>FOCO</td></tr>
+          </table>
+          <div style="margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);font-size:0.8125rem;color:rgba(255,255,255,0.4);">*Projections based on 70% avg occupancy. Subject to location and investment size.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;" data-reveal="fade">
+      <span class="section-label">Guest Experiences</span>
+      <h2 class="section-title section-title--center">What Guests <em>Say</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;" data-stagger>
+      <div style="background:var(--light-grey);border-radius:16px;padding:2rem;border:1.5px solid var(--border);">
+        <div style="color:#f59e0b;margin-bottom:0.75rem;font-size:0.9rem;">★★★★★</div>
+        <p style="font-style:italic;color:var(--text-muted);font-size:0.9rem;line-height:1.8;margin-bottom:1.25rem;">"The pod experience at Yercaud was unlike anything we've stayed in before. Waking up to those views from inside the dome was genuinely magical."</p>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:0.8rem;">RK</div>
+          <div><div style="font-size:0.875rem;font-weight:600;color:var(--navy);">Rahul Kumar</div><div style="font-size:0.75rem;color:var(--text-muted);">Bangalore · Weekend Getaway</div></div>
+        </div>
+      </div>
+      <div style="background:var(--light-grey);border-radius:16px;padding:2rem;border:1.5px solid var(--border);">
+        <div style="color:#f59e0b;margin-bottom:0.75rem;font-size:0.9rem;">★★★★★</div>
+        <p style="font-style:italic;color:var(--text-muted);font-size:0.9rem;line-height:1.8;margin-bottom:1.25rem;">"We chose the presidential pod for our anniversary. The private pool, the misty morning, the food — everything was five stars. We're already booking again."</p>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:0.8rem;">SP</div>
+          <div><div style="font-size:0.875rem;font-weight:600;color:var(--navy);">Sunita Pillai</div><div style="font-size:0.75rem;color:var(--text-muted);">Chennai · Anniversary Stay</div></div>
+        </div>
+      </div>
+      <div style="background:var(--light-grey);border-radius:16px;padding:2rem;border:1.5px solid var(--border);">
+        <div style="color:#f59e0b;margin-bottom:0.75rem;font-size:0.9rem;">★★★★★</div>
+        <p style="font-style:italic;color:var(--text-muted);font-size:0.9rem;line-height:1.8;margin-bottom:1.25rem;">"As a franchise partner, I was nervous about the returns. But the occupancy has been consistently above 75%. The passive income model really works."</p>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:0.8rem;">VM</div>
+          <div><div style="font-size:0.875rem;font-weight:600;color:var(--navy);">Venkat Murali</div><div style="font-size:0.75rem;color:var(--text-muted);">Coimbatore · Franchise Partner</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY FORM -->
+<section class="section section--grey">
+  <div class="container">
+    <div class="split-grid">
+      <div data-reveal="slide-left">
+        <span class="section-label">Enquire About Yercaud</span>
+        <h2 class="section-title">Get in Touch <em>Today</em></h2>
+        <p class="section-desc" style="margin-bottom:2rem;">Interested in visiting, investing, or partnering? Fill out the form and our team will reach out within 24 hours.</p>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--text-muted);">
+            <span style="color:var(--blue);">📞</span> <a href="tel:+919994048360" style="color:inherit;">+91 9994048360</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--text-muted);">
+            <span style="color:var(--blue);">✉️</span> <a href="mailto:pod-staysretreat@gmail.com" style="color:inherit;">pod-staysretreat@gmail.com</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--text-muted);">
+            <span style="color:var(--blue);">📍</span> Yercaud, Tamil Nadu
+          </div>
+        </div>
+      </div>
+      <div data-reveal="slide-right">
+        <div style="background:white;border-radius:18px;padding:2rem;border:1.5px solid var(--border);box-shadow:var(--shadow-sm);">
+          <form onsubmit="handleEnquiry(event, this)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-input" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone *</label>
+                <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+              <div class="form-group full">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="your@email.com">
+              </div>
+              <div class="form-group full">
+                <label class="form-label">Enquiry Type</label>
+                <select class="form-select">
+                  <option>Guest Booking Enquiry</option>
+                  <option>Investment / Partnership</option>
+                  <option>Franchise Information</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label class="form-label">Message</label>
+                <textarea class="form-textarea" placeholder="Tell us about your interest in Zenora Retreat Yercaud..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;height:52px;border-radius:12px;justify-content:center;margin-top:0.5rem;" id="enquiryBtn">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PROJECTS -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:2.5rem;" data-reveal="fade">
+      <span class="section-label">Related Projects</span>
+      <h2 class="section-title section-title--center">Explore Other <em>Locations</em></h2>
+    </div>
+    <div class="nearby-grid" data-stagger>
+
+      <a href="coorg.html" class="nearby-card">
+        <div class="nearby-card-name">Coorg</div>
+        <div class="nearby-card-link">View Project →</div>
+      </a>
+      <a href="ooty.html" class="nearby-card">
+        <div class="nearby-card-name">Ooty</div>
+        <div class="nearby-card-link">View Project →</div>
+      </a>
+      <a href="kodaikanal.html" class="nearby-card">
+        <div class="nearby-card-name">Kodaikanal</div>
+        <div class="nearby-card-link">View Project →</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="../locations.html" class="btn btn-outline">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">POD<span>STAYS</span></div>
+        <p class="footer-desc">India's first luxury pod resort chain — redefining experiential stays worldwide. Powered by Zenora Retreat.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="../index.html" class="footer-link">Home</a></li>
+          <li><a href="../about.html" class="footer-link">About Us</a></li>
+          <li><a href="../pod-models.html" class="footer-link">Pod Models</a></li>
+          <li><a href="../locations.html" class="footer-link">Projects</a></li>
+          <li><a href="../partner.html" class="footer-link">Partner With Us</a></li>
+          <li><a href="../contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Projects</div>
+        <ul class="footer-links">
+          <li><a href="../locations.html" class="footer-link">All Projects</a></li>
+          <li><a href="yercaud.html" class="footer-link">Yercaud</a></li>
+          <li><a href="coorg.html" class="footer-link">Coorg</a></li>
+          <li><a href="ooty.html" class="footer-link">Ooty</a></li>
+          <li><a href="kodaikanal.html" class="footer-link">Kodaikanal</a></li>
+          <li><a href="munnar.html" class="footer-link">Munnar</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg><a href="tel:+919994048360">+91 9994048360</a></div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:pod-staysretreat@gmail.com">pod-staysretreat@gmail.com</a></div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yercaud, Tamil Nadu, India</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 POD STAYS · Zenora Retreat. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919994048360" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="../js/main.js" defer></script>
+<script src="../js/navigation.js" defer></script>
+<script src="../js/animation.js" defer></script>
+<script>
+function handleEnquiry(e, form) {
+  e.preventDefault();
+  const btn = document.getElementById('enquiryBtn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = '✓ Sent! We\'ll contact you soon.';
+    btn.style.background = '#22c55e';
+  }, 1500);
+}
+</script>
+</body>
+</html>

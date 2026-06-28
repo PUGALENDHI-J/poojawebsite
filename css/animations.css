@@ -1,0 +1,92 @@
+/* ============================================================
+   POD STAYS — ANIMATIONS.CSS (REDESIGNED)
+   Luxury-grade motion system
+   ============================================================ */
+
+/* ── Page Load ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Hero Entrance ── */
+.hero-animate .hero-pill       { animation: fadeInUp 0.7s cubic-bezier(0.25,0.46,0.45,0.94) 0.3s both; }
+.hero-animate .hero-title      { animation: fadeInUp 0.8s cubic-bezier(0.25,0.46,0.45,0.94) 0.5s both; }
+.hero-animate .hero-desc       { animation: fadeInUp 0.7s cubic-bezier(0.25,0.46,0.45,0.94) 0.7s both; }
+.hero-animate .hero-actions    { animation: fadeInUp 0.7s cubic-bezier(0.25,0.46,0.45,0.94) 0.85s both; }
+.hero-animate .hero-stats      { animation: fadeInUp 0.7s cubic-bezier(0.25,0.46,0.45,0.94) 1s both; }
+.hero-animate .hero-booking    { animation: slideInRight 0.9s cubic-bezier(0.25,0.46,0.45,0.94) 0.6s both; }
+.hero-animate .page-hero-content { animation: fadeInUp 0.8s cubic-bezier(0.25,0.46,0.45,0.94) 0.3s both; }
+
+/* ── Hover Lifts ── */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.35s;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(26,26,26,0.12);
+}
+
+/* ── Image Zoom on Hover ── */
+.img-zoom { overflow: hidden; }
+.img-zoom img {
+  transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+  will-change: transform;
+}
+.img-zoom:hover img { transform: scale(1.06); }
+
+/* ── Pulse Animation ── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ── Scroll Indicator ── */
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ── Marquee ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Shimmer (skeleton) ── */
+@keyframes shimmer {
+  from { background-position: -400px 0; }
+  to   { background-position: 400px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, var(--sand) 25%, var(--sand-deep) 50%, var(--sand) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About POD STAYS — Our story, vision, mission and the journey of building India's first luxury pod resort chain with German engineering and eco-conscious design.">
+  <title>About Us — POD STAYS | Luxury Pod Resort Chain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <style>
+    /* ABOUT PAGE STYLES */
+    .vision-mission {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .vm-block {
+      padding: 5rem 4rem;
+    }
+    .vm-block--dark {
+      background: var(--navy);
+    }
+    .vm-block--light {
+      background: var(--light-grey);
+    }
+    .vm-label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1.5rem;
+    }
+    .vm-block--dark .vm-label { color: rgba(255,255,255,0.5); }
+    .vm-title {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .vm-block--dark .vm-title { color: var(--white); }
+    .vm-block--light .vm-title { color: var(--navy); }
+    .vm-text {
+      font-size: 0.9375rem;
+      line-height: 1.85;
+    }
+    .vm-block--dark .vm-text { color: rgba(255,255,255,0.6); }
+    .vm-block--light .vm-text { color: #4a5568; }
+
+    /* Pillars */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .pillar-card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      border-top: 3px solid var(--blue);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 8px 32px rgba(31,78,170,0.12); }
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: var(--blue);
+      opacity: 0.3;
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+    .pillar-title {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .pillar-desc {
+      font-size: 0.875rem;
+      color: #4a5568;
+      line-height: 1.7;
+    }
+
+    /* Tech bars */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .tech-bars { display: flex; flex-direction: column; gap: 2rem; }
+    .tech-bar-item {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--light-grey);
+    }
+    .tech-bar-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .tech-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .tech-bar-bg {
+      height: 4px;
+      background: var(--light-grey);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .tech-bar-fill {
+      height: 100%;
+      background: var(--blue);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1.2s ease;
+    }
+    .tech-bar-item.revealed .tech-bar-fill { transform: scaleX(1); }
+
+    /* Timeline */
+    .journey-timeline { position: relative; padding-left: 3rem; }
+    .journey-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--light-grey);
+    }
+    .journey-event { position: relative; padding-bottom: 3rem; padding-left: 2rem; }
+    .journey-event::before {
+      content: '';
+      position: absolute;
+      left: -3rem; top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--blue);
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 3px rgba(31,78,170,0.2);
+    }
+    .journey-year {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+    .journey-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .journey-desc {
+      font-size: 0.875rem;
+      color: #4a5568;
+      line-height: 1.75;
+    }
+
+    /* Values */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .value-card {
+      padding: 2.5rem;
+      background: var(--white);
+      border-radius: 18px;
+      border: 1px solid rgba(31,78,170,0.08);
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .value-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(31,78,170,0.1); }
+    .value-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      color: rgba(31,78,170,0.12);
+      font-weight: 500;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .value-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .value-desc {
+      font-size: 0.875rem;
+      color: #4a5568;
+      line-height: 1.75;
+    }
+
+    /* About split */
+    .about-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+    .about-img-wrap { height: 480px; border-radius: 18px; overflow: hidden; }
+    .about-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+    .stat-block { text-align: left; }
+    .stat-big { font-family: var(--font-display); font-size: 3rem; font-weight: 500; color: var(--blue); line-height: 1; }
+    .stat-sub { font-size: 0.8125rem; color: #4a5568; margin-top: 0.25rem; }
+
+    @media (max-width: 992px) {
+      .vision-mission { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .tech-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-split { grid-template-columns: 1fr; gap: 3rem; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 576px) {
+      .pillars-grid { grid-template-columns: 1fr; }
+      .vm-block { padding: 3rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation">
+  <a href="index.html" class="nav-logo">POD<span>STAYS</span></a>
+  <ul class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="about.html" class="nav-link active">About Us</a></li>
+    <li class="nav-item">
+      <a href="pod-models.html" class="nav-link">Pod Models <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="pod-models.html" class="nav-dropdown-item">All Pod Models</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="models/terminal-pods.html" class="nav-dropdown-item">Terminal Pods</a>
+        <a href="models/resort-pods.html" class="nav-dropdown-item">Resort Pods</a>
+        <a href="models/drive-through-pods.html" class="nav-dropdown-item">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="locations.html" class="nav-link">Projects <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="locations.html" class="nav-dropdown-item">All Projects</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="projects/yercaud.html" class="nav-dropdown-item">Yercaud</a>
+        <a href="projects/coorg.html" class="nav-dropdown-item">Coorg</a>
+        <a href="projects/ooty.html" class="nav-dropdown-item">Ooty</a>
+      </div>
+    </li>
+    <li><a href="partner.html" class="nav-link">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-link nav-cta">Get Instant Quote</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <button class="nav-mobile-close" id="mobileClose">&#x2715;</button>
+  <ul class="nav-mobile-links">
+    <li><a href="index.html" class="nav-mobile-link">Home</a></li>
+    <li><a href="about.html" class="nav-mobile-link">About Us</a></li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Pod Models</span>
+      <div class="nav-mobile-sub"><a href="pod-models.html">All Pod Models</a><a href="models/terminal-pods.html">Terminal Pods</a><a href="models/resort-pods.html">Resort Pods</a><a href="models/drive-through-pods.html">Drive Through Pods</a></div>
+    </li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Projects</span>
+      <div class="nav-mobile-sub"><a href="locations.html">All Projects</a><a href="projects/yercaud.html" class="nav-dropdown-item">Yercaud</a><a href="projects/coorg.html" class="nav-dropdown-item">Coorg</a><a href="projects/ooty.html" class="nav-dropdown-item">Ooty</a></div>
+    </li>
+    <li><a href="partner.html" class="nav-mobile-link">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-mobile-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-mobile-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get Instant Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/about-hero.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-label">Our Story</div>
+    <h1 class="page-hero-title">Built on 30 Years<br>of Modular Mastery</h1>
+  </div>
+</section>
+
+<!-- BRAND INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="about-split">
+      <div data-reveal="fade-right">
+        <div class="section-eyebrow">Who We Are</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">POD STAYS — <em>Luxury Redefined</em></h2>
+        <p style="font-size:0.9375rem;line-height:1.8;margin-bottom:1.25rem;color:#4a5568;">POD STAYS is India's first organized luxury pod resort chain — a brand born from the intersection of German engineering precision, eco-conscious design philosophy, and a deep understanding of modern experiential travel.</p>
+        <p style="font-size:0.9375rem;line-height:1.8;margin-bottom:2.5rem;color:#4a5568;">With over 30 years of expertise in advanced modular construction, our team has pioneered a hospitality model that makes luxury accessible, scalable, and sustainable — all at once.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+          <div class="stat-block">
+            <div class="stat-big">30+</div>
+            <div class="stat-sub">Years of Modular Excellence</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">9+</div>
+            <div class="stat-sub">Unique Pod Categories</div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="fade-left">
+        <div class="about-img-wrap">
+          <img src="images/about-story.jpg" alt="POD STAYS story" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION & MISSION -->
+<div class="vision-mission">
+  <div class="vm-block vm-block--dark" data-reveal="fade-right">
+    <div class="vm-label">Our Vision</div>
+    <h2 class="vm-title">To Pioneer a Global Chain of Luxury Getaway Pod Resorts</h2>
+    <p class="vm-text">To become a pioneer in building and operating a global chain of Luxury Getaway POD Resorts — redefining the future of experiential stays worldwide. We envision POD STAYS pods in every great landscape on earth, from the Himalayas to Bali.</p>
+  </div>
+  <div class="vm-block vm-block--light" data-reveal="fade-left">
+    <div class="vm-label">Our Mission</div>
+    <h2 class="vm-title">World-Class Pod Resorts Powered by German Technology</h2>
+    <p class="vm-text">To build and operate a world-class chain of Luxury Getaway Pod Resorts powered by advanced German technology — delivered across India and worldwide. Every pod is a promise: of innovation, of comfort, of a stay you will remember forever.</p>
+  </div>
+</div>
+
+<!-- PILLARS -->
+<section class="section" style="background:var(--light-grey);">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow section-eyebrow--center">Our Pillars</div>
+      <h2 class="section-title section-title--center">Four Foundations of <em>Everything We Do</em></h2>
+    </div>
+    <div class="pillars-grid" data-stagger>
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title">Innovation</div>
+        <p class="pillar-desc">German technology and modular precision at the heart of every structure we build.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title">Sustainability</div>
+        <p class="pillar-desc">Eco-friendly, off-grid ready systems that leave the earth better than we found it.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title">Scalability</div>
+        <p class="pillar-desc">Add pods anytime, scale fast. Our modular model grows with your ambition.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <div class="pillar-title">Returns</div>
+        <p class="pillar-desc">Quick deployment and a vibrant ROI framework that delivers real wealth for partners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="section">
+  <div class="container">
+    <div class="tech-grid">
+      <div data-reveal="fade-right">
+        <div class="section-eyebrow">Technology Advantage</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">German Engineering Meets <em>Indian Hospitality</em></h2>
+        <p style="font-size:0.9375rem;line-height:1.8;margin-bottom:2.5rem;color:#4a5568;">Our manufacturing facility houses CNC precision cutting, automated assembly lines, and advanced composite panel production — all to deliver pods that exceed international hospitality standards.</p>
+        <div class="tech-bars">
+          <div class="tech-bar-item">
+            <div class="tech-bar-label"><span>Deployment Speed</span><span>70% Faster</span></div>
+            <div class="tech-bar-bg"><div class="tech-bar-fill" style="width:70%"></div></div>
+          </div>
+          <div class="tech-bar-item">
+            <div class="tech-bar-label"><span>Build Quality Score</span><span>International Grade</span></div>
+            <div class="tech-bar-bg"><div class="tech-bar-fill" style="width:95%"></div></div>
+          </div>
+          <div class="tech-bar-item">
+            <div class="tech-bar-label"><span>Energy Efficiency</span><span>Off-Grid Capable</span></div>
+            <div class="tech-bar-bg"><div class="tech-bar-fill" style="width:85%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="fade-left">
+        <div class="about-img-wrap">
+          <img src="images/technology.jpg" alt="POD STAYS pod manufacturing" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="section" style="background:var(--light-grey);">
+  <div class="container">
+    <div class="about-split">
+      <div data-reveal="fade-right">
+        <div class="section-eyebrow">Our Journey</div>
+        <h2 class="section-title" style="margin-bottom:1rem;">A Decade of <em>Building Tomorrow</em></h2>
+        <p style="font-size:0.9375rem;line-height:1.8;margin-bottom:2.5rem;color:#4a5568;">From a vision to redefine Indian hospitality to becoming the category creator for luxury pod resorts — our journey has been marked by relentless innovation.</p>
+        <div class="about-img-wrap" style="height:300px;">
+          <img src="images/journey.jpg" alt="POD STAYS Resort Yercaud" loading="lazy">
+        </div>
+      </div>
+      <div data-reveal="fade-left">
+        <div class="journey-timeline">
+          <div class="journey-event">
+            <div class="journey-year">Foundations</div>
+            <h3 class="journey-title">30+ Years in Modular Construction</h3>
+            <p class="journey-desc">The founding team establishes deep expertise in advanced, eco-friendly modular building using German CNC technology — laying the groundwork for what would become POD STAYS.</p>
+          </div>
+          <div class="journey-event">
+            <div class="journey-year">The Idea</div>
+            <h3 class="journey-title">POD STAYS Concept Born</h3>
+            <p class="journey-desc">Recognizing a massive gap in India's experiential hospitality market, the concept for India's first organized luxury pod resort chain takes shape.</p>
+          </div>
+          <div class="journey-event">
+            <div class="journey-year">2026 — Now</div>
+            <h3 class="journey-title">Yercaud Flagship Launch</h3>
+            <p class="journey-desc">POD STAYS's first resort at Yercaud, Tamil Nadu launches with 9+ pod models, premium amenities, and the FOCO franchise model. The category is created.</p>
+          </div>
+          <div class="journey-event">
+            <div class="journey-year">2027 → Beyond</div>
+            <h3 class="journey-title">Pan-India &amp; Global Expansion</h3>
+            <p class="journey-desc">Active pipeline across Tamil Nadu, Kerala, Himachal Pradesh — followed by UAE, Thailand, Bali and Sri Lanka. 500+ pods by 2029.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow section-eyebrow--center">Our Values</div>
+      <h2 class="section-title section-title--center">What We Stand For, <em>Every Day</em></h2>
+    </div>
+    <div class="values-grid" data-stagger>
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <div>
+          <h3 class="value-title">Luxury Without Compromise</h3>
+          <p class="value-desc">Every pod is a masterpiece. From fire-resistant panels to premium finishes — we refuse to compromise on quality at any stage of the guest journey.</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <div>
+          <h3 class="value-title">Earth-First Design</h3>
+          <p class="value-desc">Off-grid solar systems, zero-footprint construction methods, and eco-conscious material choices — our luxury comes without a cost to the planet.</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <div>
+          <h3 class="value-title">Partner-First Philosophy</h3>
+          <p class="value-desc">Franchise partners are co-creators, not just investors. Transparent reporting, monthly revenue sharing, and a 70:30 split in your favour — always.</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">04</div>
+        <div>
+          <h3 class="value-title">Innovation at Every Layer</h3>
+          <p class="value-desc">From the engineering floor to the guest experience — we question every convention and pursue better solutions with curiosity and precision.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER MESSAGE -->
+<section class="section" style="background:var(--light-grey);">
+  <div class="container">
+    <div style="max-width:800px;margin:0 auto;text-align:center;" data-reveal="fade-up">
+      <div class="section-eyebrow section-eyebrow--center">Founder's Message</div>
+      <blockquote style="font-family:var(--font-display);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;font-style:italic;color:var(--navy);line-height:1.55;margin-bottom:2rem;">
+        "We didn't just build pods. We built a new category of travel — one where luxury and nature are not in conflict, where investing in hospitality doesn't require decades of waiting, and where every guest leaves changed."
+      </blockquote>
+      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);">Founder, POD STAYS · Yercaud, Tamil Nadu</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-cta">
+  <div class="container" style="text-align:center;" data-reveal="fade-up">
+    <div class="section-eyebrow section-eyebrow--center" style="color:rgba(255,255,255,0.6);">Join the Movement</div>
+    <h2 class="section-title section-title--center" style="color:var(--white);">Be Part of India's Most <em>Exciting Hospitality Story</em></h2>
+    <p style="color:rgba(255,255,255,0.6);margin-bottom:2.5rem;font-size:0.9375rem;max-width:540px;margin-left:auto;margin-right:auto;">Whether as a guest seeking extraordinary stays or a partner building lasting wealth — POD STAYS welcomes you.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="partner.html" class="btn-primary">Explore Partnership</a>
+      <a href="contact.html" class="btn-outline-white">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">POD<span>STAYS</span></div>
+        <p class="footer-desc">India's first luxury pod resort chain — redefining experiential stays across India and worldwide.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="pod-models.html" class="footer-link">Pod Models</a></li>
+          <li><a href="locations.html" class="footer-link">Projects</a></li>
+          <li><a href="partner.html" class="footer-link">Services</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pod Models</div>
+        <ul class="footer-links">
+          <li><a href="pod-models.html" class="footer-link">All Pod Models</a></li>
+          <li><a href="models/terminal-pods.html" class="footer-link">Terminal Pods</a></li>
+          <li><a href="models/resort-pods.html" class="footer-link">Resort Pods</a></li>
+          <li><a href="models/drive-through-pods.html" class="footer-link">Drive Through Pods</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          <a href="tel:+919994048360" style="color:inherit;">+91 9994048360</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Yercaud, Tamil Nadu, India</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@podstays.in" style="color:inherit;">info@podstays.in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 POD STAYS. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919994048360?text=Hello%20POD%20STAYS!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js" defer></script>
+<script src="js/navigation.js" defer></script>
+<script src="js/animation.js" defer></script>
+</body>
+</html>

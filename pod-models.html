@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="POD STAYS — Explore all pod models including Terminal, Resort, and Drive Through configurations." />
+  <title>All Pod Models — POD STAYS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <style>
+    .models-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .model-overview-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s;
+    }
+    .model-overview-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .model-overview-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .model-overview-body { padding: 1.75rem; }
+    .model-overview-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.6rem;
+    }
+    .model-overview-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .model-overview-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .model-specs-row {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: 0.5rem;
+    }
+    .model-spec-item { }
+    .model-spec-val {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .model-spec-key {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+    @media (max-width: 992px) { .models-overview-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 576px) { .models-overview-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation">
+  <a href="index.html" class="nav-logo">POD<span>STAYS</span></a>
+  <ul class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="about.html" class="nav-link">About Us</a></li>
+    <li class="nav-item">
+      <a href="pod-models.html" class="nav-link active">Pod Models <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="pod-models.html" class="nav-dropdown-item active">All Pod Models</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="models/terminal-pods.html" class="nav-dropdown-item">Terminal Pods</a>
+        <a href="models/resort-pods.html" class="nav-dropdown-item">Resort Pods</a>
+        <a href="models/drive-through-pods.html" class="nav-dropdown-item">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="locations.html" class="nav-link">Projects <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="locations.html" class="nav-dropdown-item">All Projects</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="projects/yercaud.html" class="nav-dropdown-item">Yercaud</a>
+        <a href="projects/coorg.html" class="nav-dropdown-item">Coorg</a>
+        <a href="projects/ooty.html" class="nav-dropdown-item">Ooty</a>
+      </div>
+    </li>
+    <li><a href="partner.html" class="nav-link">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-link nav-cta">Get Instant Quote</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="nav-mobile" id="mobileMenu">
+  <button class="nav-mobile-close" id="mobileClose">&#x2715;</button>
+  <ul class="nav-mobile-links">
+    <li><a href="index.html" class="nav-mobile-link">Home</a></li>
+    <li><a href="about.html" class="nav-mobile-link">About Us</a></li>
+    <li class="nav-mobile-item">
+      <span class="nav-mobile-link nav-mobile-toggle">Pod Models</span>
+      <div class="nav-mobile-sub">
+        <a href="pod-models.html">All Pod Models</a>
+        <a href="models/terminal-pods.html">Terminal Pods</a>
+        <a href="models/resort-pods.html">Resort Pods</a>
+        <a href="models/drive-through-pods.html">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-mobile-item">
+      <span class="nav-mobile-link nav-mobile-toggle">Projects</span>
+      <div class="nav-mobile-sub">
+        <a href="locations.html">All Projects</a>
+        <a href="projects/yercaud.html" class="nav-dropdown-item">Yercaud</a>
+        <a href="projects/coorg.html" class="nav-dropdown-item">Coorg</a>
+        <a href="projects/ooty.html" class="nav-dropdown-item">Ooty</a>
+      </div>
+    </li>
+    <li><a href="partner.html" class="nav-mobile-link">Services</a></li>
+    <li><a href="contact.html" class="nav-mobile-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get Instant Quote</a>
+</div>
+
+<!-- Hero -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/models-hero.jpg')"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-label">Pod Models</div>
+    <h1>Engineered for Every<br>Hospitality Context</h1>
+    <p>Nine distinct pod configurations designed to maximize revenue across resort, transit, and highway markets.</p>
+  </div>
+</div>
+
+<!-- Overview -->
+<section class="section">
+  <div class="container">
+    <div data-reveal>
+      <span class="section-label">Our Portfolio</span>
+      <h2 class="section-title">Three Core Pod<br>Categories</h2>
+      <p class="section-desc">Each category is purpose-engineered for its deployment environment, ensuring optimal guest experience and investment returns.</p>
+    </div>
+    <div class="models-overview-grid" data-stagger>
+      <div class="model-overview-card">
+        <img src="images/pod-tunnel.jpg" alt="Terminal Pods" loading="lazy">
+        <div class="model-overview-body">
+          <div class="model-overview-tag">Transit Hospitality</div>
+          <div class="model-overview-title">Terminal Pods</div>
+          <p class="model-overview-desc">Compact, high-throughput pod configurations designed for airports, bus terminals, and transit hubs. Optimized for short stays and layovers.</p>
+          <div class="model-specs-row">
+            <div class="model-spec-item">
+              <div class="model-spec-val">60–120 sqft</div>
+              <div class="model-spec-key">Pod Size</div>
+            </div>
+            <div class="model-spec-item">
+              <div class="model-spec-val">8–24 hrs</div>
+              <div class="model-spec-key">Typical Stay</div>
+            </div>
+          </div>
+          <a href="models/terminal-pods.html" class="btn btn-primary" style="margin-top:1rem; width:100%; justify-content:center;">Explore Terminal Pods</a>
+        </div>
+      </div>
+      <div class="model-overview-card">
+        <img src="images/resort-1.jpg" alt="Resort Pods" loading="lazy">
+        <div class="model-overview-body">
+          <div class="model-overview-tag">Luxury Getaway</div>
+          <div class="model-overview-title">Resort Pods</div>
+          <p class="model-overview-desc">Premium holiday escapes for hills, forests, and scenic destinations. Full resort-grade amenities in a modular, eco-friendly form factor.</p>
+          <div class="model-specs-row">
+            <div class="model-spec-item">
+              <div class="model-spec-val">150–400 sqft</div>
+              <div class="model-spec-key">Pod Size</div>
+            </div>
+            <div class="model-spec-item">
+              <div class="model-spec-val">1–7 nights</div>
+              <div class="model-spec-key">Typical Stay</div>
+            </div>
+          </div>
+          <a href="models/resort-pods.html" class="btn btn-primary" style="margin-top:1rem; width:100%; justify-content:center;">Explore Resort Pods</a>
+        </div>
+      </div>
+      <div class="model-overview-card">
+        <img src="images/pod-orange.jpg" alt="Drive Through Pods" loading="lazy">
+        <div class="model-overview-body">
+          <div class="model-overview-tag">Highway Hospitality</div>
+          <div class="model-overview-title">Drive Through Pods</div>
+          <p class="model-overview-desc">Strategically positioned along national highways. Purpose-built for road travellers, pitstops, and convenient overnight stays.</p>
+          <div class="model-specs-row">
+            <div class="model-spec-item">
+              <div class="model-spec-val">80–160 sqft</div>
+              <div class="model-spec-key">Pod Size</div>
+            </div>
+            <div class="model-spec-item">
+              <div class="model-spec-val">4–16 hrs</div>
+              <div class="model-spec-key">Typical Stay</div>
+            </div>
+          </div>
+          <a href="models/drive-through-pods.html" class="btn btn-primary" style="margin-top:1rem; width:100%; justify-content:center;">Explore Drive Through</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section section--grey">
+  <div class="container">
+    <div data-reveal><span class="section-label">Gallery</span><h2 class="section-title">Pod Models in Detail</h2></div>
+    <div class="gallery-grid" style="margin-top:2rem;" data-stagger>
+      <div class="gallery-item"><img src="images/pod-1.jpg" alt="Pod Model" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-2.jpg" alt="Pod Model" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-3.jpg" alt="Pod Model" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-4.jpg" alt="Pod Model" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-5.jpg" alt="Pod Model" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-6.jpg" alt="Pod Model" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-7.jpg" alt="Pod Model" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/pod-8.jpg" alt="Pod Model" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="container">
+    <div class="cta-inner" data-reveal>
+      <span class="section-label" style="color:#93C5FD;display:block;text-align:center;">Custom Configurations</span>
+      <h2>Need a Custom Pod<br>Configuration?</h2>
+      <p>Our engineering team can design bespoke pod solutions tailored to your specific site, market, and investment requirements.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+        <a href="partner.html" class="btn btn-white">Franchise Overview</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">POD<span>STAYS</span></div>
+        <p class="footer-brand-desc">India's first luxury modular pod resort chain. German-engineered hospitality infrastructure.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Pod Models</div>
+        <ul class="footer-links">
+          <li><a href="pod-models.html">All Pod Models</a></li>
+          <li><a href="models/terminal-pods.html">Terminal Pods</a></li>
+          <li><a href="models/resort-pods.html">Resort Pods</a></li>
+          <li><a href="models/drive-through-pods.html">Drive Through Pods</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="locations.html">Projects</a></li>
+          <li><a href="partner.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.39-.39a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z"/></svg><a href="tel:+919876543210">+91 98765 43210</a></div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@podstays.in">info@podstays.in</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 POD STAYS. All rights reserved.</span>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/navigation.js"></script>
+<script>
+  const revealEls = document.querySelectorAll('[data-reveal], [data-stagger]');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+  revealEls.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Partner with POD STAYS — India's first luxury pod resort FOCO franchise model. 30–38% annual ROI. Invest ₹60L to ₹6 Crore in experiential hospitality.">
+  <title>Services & Partnership — POD STAYS | Luxury Pod Resort Chain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <style>
+    /* ── PARTNER PAGE STYLES ── */
+    .stats-bar {
+      background: var(--navy);
+      padding: 2.5rem 0;
+    }
+    .stats-bar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .stat-bar-item {
+      text-align: center;
+      padding: 1rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-bar-item:last-child { border-right: none; }
+    .stat-bar-value { font-family: var(--font-display); font-size: 2.25rem; font-weight: 500; color: var(--white); line-height: 1; margin-bottom: 0.35rem; }
+    .stat-bar-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+
+    /* Opportunity */
+    .opportunity-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .opp-highlight-list { list-style: none; margin: 1.5rem 0 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .opp-highlight-list li {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.9375rem; color: #4a5568;
+    }
+    .opp-highlight-list li::before {
+      content: '';
+      width: 20px; height: 20px; min-width: 20px;
+      border-radius: 50%; background: rgba(31,78,170,0.1);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231F4EAA' stroke-width='2.5'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .opp-badge {
+      background: var(--blue);
+      border-radius: 18px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .opp-badge-value { font-family: var(--font-display); font-size: 4rem; font-weight: 500; line-height: 1; margin-bottom: 0.5rem; }
+    .opp-badge-label { font-size: 0.875rem; opacity: 0.75; }
+    .opp-badge-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+    .opp-metric-val { font-family: var(--font-display); font-size: 1.75rem; font-weight: 500; color: var(--white); }
+    .opp-metric-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 0.25rem; }
+
+    /* Model Cards */
+    .models-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .model-card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 2.5rem;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .model-card:hover { box-shadow: 0 8px 36px rgba(31,78,170,0.1); transform: translateY(-4px); }
+    .model-card.featured { border-color: var(--blue); position: relative; }
+    .model-card-tag {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 1rem;
+      background: rgba(31,78,170,0.08); padding: 0.35rem 0.75rem; border-radius: 4px;
+      display: inline-block;
+    }
+    .model-card.featured .model-card-tag { background: var(--blue); color: var(--white); }
+    .model-card-name { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }
+    .model-card-full { font-size: 0.875rem; color: #64748b; margin-bottom: 1.25rem; }
+    .model-card-desc { font-size: 0.9375rem; color: #4a5568; line-height: 1.75; margin-bottom: 1.5rem; }
+    .model-features { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 2rem; }
+    .model-feature-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; font-size: 0.875rem;
+    }
+    .model-feature-label { color: #64748b; }
+    .model-feature-value { color: var(--navy); font-weight: 500; }
+
+    /* Tiers */
+    .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .tier-card {
+      background: var(--white); border-radius: 18px; padding: 2.5rem;
+      border: 1.5px solid #e2e8f0; position: relative;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .tier-card:hover { box-shadow: 0 8px 36px rgba(31,78,170,0.1); transform: translateY(-4px); }
+    .tier-card.recommended { border-color: var(--blue); }
+    .tier-recommended-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--blue); color: var(--white);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.3rem 1rem; border-radius: 20px; white-space: nowrap;
+    }
+    .tier-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.35rem; }
+    .tier-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: var(--navy); margin-bottom: 0.75rem; }
+    .tier-investment { font-family: var(--font-display); font-size: 1.75rem; font-weight: 500; color: var(--navy); margin-bottom: 0.25rem; }
+    .tier-investment-note { font-size: 0.8125rem; color: #64748b; margin-bottom: 0.75rem; }
+    .tier-roi { font-size: 0.875rem; font-weight: 600; color: var(--blue); padding: 0.4rem 0.75rem; background: rgba(31,78,170,0.08); border-radius: 4px; display: inline-block; margin-bottom: 1.5rem; }
+    .tier-includes { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
+    .tier-includes li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.875rem; color: #4a5568; }
+    .tier-includes li::before {
+      content: '';
+      width: 16px; height: 16px; min-width: 16px; margin-top: 2px;
+      border-radius: 50%; background: rgba(31,78,170,0.1);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%231F4EAA' stroke-width='2.5'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: center;
+    }
+
+    /* Process Steps */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .process-step {
+      text-align: center; padding: 2.5rem 1.5rem;
+      background: var(--white); border-radius: 18px;
+      border: 1.5px solid #e2e8f0; position: relative;
+    }
+    .step-number {
+      font-family: var(--font-display); font-size: 3rem; font-weight: 500;
+      color: rgba(31,78,170,0.12); line-height: 1; margin-bottom: 0.75rem;
+    }
+    .step-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 500; color: var(--navy); margin-bottom: 0.75rem; }
+    .step-desc { font-size: 0.875rem; color: #4a5568; line-height: 1.7; margin-bottom: 1rem; }
+    .step-timeline { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+
+    /* FOCO Benefits */
+    .foco-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .foco-benefit { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.75rem; }
+    .foco-benefit-icon-box {
+      width: 2.75rem; height: 2.75rem; border-radius: 10px;
+      background: rgba(31,78,170,0.08); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; color: var(--blue);
+    }
+    .foco-benefit-title { font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; font-size: 0.9375rem; }
+    .foco-benefit-desc { font-size: 0.875rem; color: #4a5568; line-height: 1.7; }
+
+    .comparison-box { background: var(--light-grey); border-radius: 18px; padding: 2rem; }
+    .compare-col-headers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .compare-col-head { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.75rem 1rem; border-radius: 8px; text-align: center; }
+    .compare-col-head.yes { background: var(--blue); color: var(--white); }
+    .compare-col-head.no { background: #e2e8f0; color: #64748b; }
+    .compare-rows { display: flex; flex-direction: column; gap: 0; }
+    .compare-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; }
+    .compare-row:last-child { border-bottom: none; }
+    .compare-cell { font-size: 0.875rem; padding: 0.35rem 0.75rem; border-radius: 6px; }
+    .compare-cell.yes { color: #1a6b36; background: rgba(34,197,94,0.08); }
+    .compare-cell.no { color: #64748b; background: transparent; text-decoration: line-through; opacity: 0.65; }
+
+    .revenue-split-box { background: var(--navy); border-radius: 18px; padding: 2rem; margin-top: 1.5rem; }
+    .rs-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+    .rs-bars { display: flex; height: 2.5rem; border-radius: 8px; overflow: hidden; gap: 2px; }
+    .rs-partner { background: var(--blue); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 0.8125rem; font-weight: 600; flex: 70; }
+    .rs-us { background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.75rem; flex: 30; }
+
+    /* Testimonials */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .tc { background: var(--white); border-radius: 18px; padding: 2rem; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 16px rgba(0,0,0,0.04); }
+    .tc-quote { font-family: var(--font-display); font-size: 1rem; color: var(--navy); line-height: 1.65; margin-bottom: 1.5rem; font-style: italic; }
+    .tc-author { display: flex; align-items: center; gap: 0.75rem; }
+    .tc-avatar { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--blue); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1rem; font-weight: 500; flex-shrink: 0; }
+    .tc-name { font-weight: 600; color: var(--navy); font-size: 0.9rem; }
+    .tc-location { font-size: 0.78rem; color: #64748b; }
+
+    /* Application Form */
+    .application-section { background: var(--light-grey); }
+    .app-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0; }
+    .app-step { text-align: center; padding: 2rem 1.5rem; background: var(--white); border-radius: 14px; }
+    .app-step-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; color: rgba(31,78,170,0.15); line-height: 1; margin-bottom: 0.5rem; }
+    .app-step-title { font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+    .app-step-desc { font-size: 0.875rem; color: #4a5568; line-height: 1.7; }
+
+    @media (max-width: 992px) {
+      .stats-bar-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-bar-item:nth-child(2) { border-right: none; }
+      .opportunity-split { grid-template-columns: 1fr; gap: 3rem; }
+      .models-grid { grid-template-columns: 1fr; }
+      .tiers-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .foco-split { grid-template-columns: 1fr; gap: 3rem; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .app-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation">
+  <a href="index.html" class="nav-logo">POD<span>STAYS</span></a>
+  <ul class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="about.html" class="nav-link">About Us</a></li>
+    <li class="nav-item">
+      <a href="pod-models.html" class="nav-link">Pod Models <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="pod-models.html" class="nav-dropdown-item">All Pod Models</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="models/terminal-pods.html" class="nav-dropdown-item">Terminal Pods</a>
+        <a href="models/resort-pods.html" class="nav-dropdown-item">Resort Pods</a>
+        <a href="models/drive-through-pods.html" class="nav-dropdown-item">Drive Through Pods</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="locations.html" class="nav-link">Projects <span class="nav-link-arrow"></span></a>
+      <div class="nav-dropdown">
+        <a href="locations.html" class="nav-dropdown-item">All Projects</a>
+        <div class="nav-dropdown-divider"></div>
+        <a href="projects/yercaud.html" class="nav-dropdown-item">Yercaud</a>
+        <a href="projects/coorg.html" class="nav-dropdown-item">Coorg</a>
+        <a href="projects/ooty.html" class="nav-dropdown-item">Ooty</a>
+      </div>
+    </li>
+    <li><a href="partner.html" class="nav-link active">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-link nav-cta">Get Instant Quote</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <button class="nav-mobile-close" id="mobileClose">&#x2715;</button>
+  <ul class="nav-mobile-links">
+    <li><a href="index.html" class="nav-mobile-link">Home</a></li>
+    <li><a href="about.html" class="nav-mobile-link">About Us</a></li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Pod Models</span>
+      <div class="nav-mobile-sub"><a href="pod-models.html">All Pod Models</a><a href="models/terminal-pods.html">Terminal Pods</a><a href="models/resort-pods.html">Resort Pods</a><a href="models/drive-through-pods.html">Drive Through Pods</a></div>
+    </li>
+    <li class="nav-mobile-item"><span class="nav-mobile-link nav-mobile-toggle">Projects</span>
+      <div class="nav-mobile-sub"><a href="locations.html">All Projects</a><a href="projects/yercaud.html" class="nav-dropdown-item">Yercaud</a><a href="projects/coorg.html" class="nav-dropdown-item">Coorg</a><a href="projects/ooty.html" class="nav-dropdown-item">Ooty</a></div>
+    </li>
+    <li><a href="partner.html" class="nav-mobile-link">Services</a></li>
+    <li><a href="about.html#gallery" class="nav-mobile-link">Gallery</a></li>
+    <li><a href="contact.html" class="nav-mobile-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get Instant Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/partner-hero.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-label">Franchise Ownership Opportunity</div>
+    <h1 class="page-hero-title">Own a Piece of<br><em>India's Future</em></h1>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-bar-grid">
+      <div class="stat-bar-item"><div class="stat-bar-value">30–38%</div><div class="stat-bar-label">Annual ROI</div></div>
+      <div class="stat-bar-item"><div class="stat-bar-value">70:30</div><div class="stat-bar-label">Revenue Split (Your Favour)</div></div>
+      <div class="stat-bar-item"><div class="stat-bar-value">3–6</div><div class="stat-bar-label">Month Deployment</div></div>
+      <div class="stat-bar-item"><div class="stat-bar-value">28%</div><div class="stat-bar-label">Sector CAGR</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- OPPORTUNITY -->
+<section class="section">
+  <div class="container">
+    <div class="opportunity-split">
+      <div data-reveal="fade-right">
+        <div class="section-eyebrow">Why Now. Why POD STAYS.</div>
+        <h2 class="section-title">The Opportunity<br>of a <em>Decade</em></h2>
+        <p style="font-size:0.9375rem;color:#4a5568;line-height:1.8;margin-bottom:1rem;">India's alternative accommodation sector is exploding at 28% CAGR. Urban millennials are abandoning conventional hotels for curated, experiential stays. POD STAYS sits at the heart of this shift — and we're inviting partners to grow with us.</p>
+        <p style="font-size:0.9375rem;color:#4a5568;line-height:1.8;margin-bottom:1.5rem;">With our FOCO (Franchise Owned, Company Operated) model, you invest in a premium asset while our expert team handles everything from operations to guest experience. Zero hospitality experience required.</p>
+        <ul class="opp-highlight-list">
+          <li>Germany-engineered pods — durable, premium, depreciating slowly</li>
+          <li>Fully managed by POD STAYS's trained hospitality team</li>
+          <li>Transparent monthly earnings reports</li>
+          <li>Early-mover advantage across high-demand destinations</li>
+          <li>Brand, marketing and bookings handled centrally</li>
+        </ul>
+        <a href="#apply" class="btn-primary">Apply to Partner</a>
+      </div>
+      <div data-reveal="fade-left">
+        <div class="opp-badge">
+          <div class="opp-badge-value">₹6Cr</div>
+          <div class="opp-badge-label">Maximum Investment Tier</div>
+          <div class="opp-badge-metrics">
+            <div><div class="opp-metric-val">₹60L</div><div class="opp-metric-label">Entry Investment</div></div>
+            <div><div class="opp-metric-val">70%</div><div class="opp-metric-label">Your Revenue Share</div></div>
+            <div><div class="opp-metric-val">3–6M</div><div class="opp-metric-label">To Launch</div></div>
+            <div><div class="opp-metric-val">38%</div><div class="opp-metric-label">Max Annual ROI</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIP MODELS -->
+<section class="section" style="background:var(--light-grey);">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow">Choose Your Model</div>
+      <h2 class="section-title">FOCO &amp; COCO <em>Partnership Structures</em></h2>
+    </div>
+    <div class="models-grid" data-stagger>
+      <div class="model-card featured">
+        <div class="model-card-tag">Recommended — Most Popular</div>
+        <div class="model-card-name">FOCO</div>
+        <div class="model-card-full">Franchise Owned, Company Operated</div>
+        <p class="model-card-desc">You own the pods and the land. We build, brand, staff, market and operate. You receive a guaranteed 70% revenue share every month — completely hands-off.</p>
+        <ul class="model-features">
+          <li class="model-feature-item"><span class="model-feature-label">Ownership</span><span class="model-feature-value">Partner (You)</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Operations</span><span class="model-feature-value">POD STAYS Team</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Revenue Share</span><span class="model-feature-value">70% to Partner</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Effort Required</span><span class="model-feature-value">Zero</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Deployment Time</span><span class="model-feature-value">3–6 Months</span></li>
+        </ul>
+        <a href="#apply" class="btn-primary">Apply for FOCO</a>
+      </div>
+      <div class="model-card">
+        <div class="model-card-tag">Alternative Option</div>
+        <div class="model-card-name">COCO</div>
+        <div class="model-card-full">Company Owned, Company Operated</div>
+        <p class="model-card-desc">POD STAYS owns and operates the pods on your land. You provide the location and receive a fixed lease income monthly — ideal for land-rich partners.</p>
+        <ul class="model-features">
+          <li class="model-feature-item"><span class="model-feature-label">Ownership</span><span class="model-feature-value">POD STAYS</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Operations</span><span class="model-feature-value">POD STAYS Team</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Revenue Share</span><span class="model-feature-value">Fixed Lease Income</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Effort Required</span><span class="model-feature-value">Zero</span></li>
+          <li class="model-feature-item"><span class="model-feature-label">Deployment Time</span><span class="model-feature-value">6–9 Months</span></li>
+        </ul>
+        <a href="#apply" class="btn-primary">Apply for COCO</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT TIERS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow">Investment Options</div>
+      <h2 class="section-title">Choose Your <em>Entry Point</em></h2>
+    </div>
+    <div class="tiers-grid" data-stagger>
+      <div class="tier-card">
+        <div class="tier-label">Starter</div>
+        <div class="tier-name">Capsule Cluster</div>
+        <div class="tier-investment">₹60L – ₹1.5Cr</div>
+        <div class="tier-investment-note">2–4 pod units</div>
+        <div class="tier-roi">30–32% Annual ROI</div>
+        <ul class="tier-includes">
+          <li>2–4 Capsule or Sleeping pods</li>
+          <li>Full setup, furnishing &amp; branding</li>
+          <li>Central booking integration</li>
+          <li>70% monthly revenue share</li>
+          <li>Quarterly performance review</li>
+        </ul>
+        <a href="#apply" class="btn-primary" style="width:100%;text-align:center;justify-content:center;">Apply Now</a>
+      </div>
+      <div class="tier-card recommended">
+        <div class="tier-recommended-badge">Most Popular</div>
+        <div class="tier-label">Growth</div>
+        <div class="tier-name">Signature Resort</div>
+        <div class="tier-investment">₹1.5Cr – ₹3.5Cr</div>
+        <div class="tier-investment-note">8–15 pod units</div>
+        <div class="tier-roi">33–36% Annual ROI</div>
+        <ul class="tier-includes">
+          <li>Mix of Dome, Tunnel, Orange &amp; Apple pods</li>
+          <li>Full resort layout &amp; landscaping</li>
+          <li>Restaurant/café setup included</li>
+          <li>70% monthly revenue share</li>
+          <li>Dedicated POD STAYS property manager</li>
+          <li>Monthly earnings reports</li>
+        </ul>
+        <a href="#apply" class="btn-primary" style="width:100%;text-align:center;justify-content:center;">Apply Now</a>
+      </div>
+      <div class="tier-card">
+        <div class="tier-label">Premium</div>
+        <div class="tier-name">Luxury Estate</div>
+        <div class="tier-investment">₹3.5Cr – ₹6Cr</div>
+        <div class="tier-investment-note">20+ pod units</div>
+        <div class="tier-roi">36–38% Annual ROI</div>
+        <ul class="tier-includes">
+          <li>All pod types including Presidential Villa</li>
+          <li>Full spa, pool &amp; activity facilities</li>
+          <li>Premium restaurant + event space</li>
+          <li>70% monthly revenue share</li>
+          <li>Dedicated GM + operational team</li>
+          <li>Monthly earnings + annual audit</li>
+          <li>Priority new location allocation</li>
+        </ul>
+        <a href="#apply" class="btn-primary" style="width:100%;text-align:center;justify-content:center;">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" style="background:var(--navy);">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow" style="color:rgba(255,255,255,0.5);">The Journey</div>
+      <h2 class="section-title" style="color:var(--white);">From Interest to <em>First Revenue</em></h2>
+    </div>
+    <div class="process-grid" data-stagger>
+      <div class="process-step" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08);">
+        <div class="step-number" style="color:rgba(255,255,255,0.15);">01</div>
+        <div class="step-title" style="color:var(--white);">Application</div>
+        <p class="step-desc" style="color:rgba(255,255,255,0.6);">Fill out our partner application. Our team reviews your profile and gets in touch within 48 hours.</p>
+        <div class="step-timeline">Week 1</div>
+      </div>
+      <div class="process-step" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08);">
+        <div class="step-number" style="color:rgba(255,255,255,0.15);">02</div>
+        <div class="step-title" style="color:var(--white);">Site Assessment</div>
+        <p class="step-desc" style="color:rgba(255,255,255,0.6);">Our team visits your proposed site, assesses feasibility, terrain, access and guest experience potential.</p>
+        <div class="step-timeline">Weeks 2–3</div>
+      </div>
+      <div class="process-step" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08);">
+        <div class="step-number" style="color:rgba(255,255,255,0.15);">03</div>
+        <div class="step-title" style="color:var(--white);">Agreement &amp; Setup</div>
+        <p class="step-desc" style="color:rgba(255,255,255,0.6);">We sign the franchise agreement, finalize pod selection, and begin the 3–6 month setup and installation.</p>
+        <div class="step-timeline">Months 1–6</div>
+      </div>
+      <div class="process-step" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08);">
+        <div class="step-number" style="color:rgba(255,255,255,0.15);">04</div>
+        <div class="step-title" style="color:var(--white);">Launch &amp; Earn</div>
+        <p class="step-desc" style="color:rgba(255,255,255,0.6);">We launch with a marketing blitz, handle all bookings, and transfer your 70% revenue share every month.</p>
+        <div class="step-timeline">Month 6+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FOCO -->
+<section class="section">
+  <div class="container">
+    <div class="foco-split">
+      <div data-reveal="fade-right">
+        <div class="section-eyebrow">Why Our Model Works</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">You Invest.<br><em>We Deliver.</em></h2>
+        <p style="font-size:0.9375rem;color:#4a5568;line-height:1.8;margin-bottom:2.5rem;">The FOCO model flips traditional hospitality ownership on its head. No daily operations headache. No hiring nightmares. No guest complaints at 2am. Just monthly earnings in your account.</p>
+        <div class="foco-benefit">
+          <div class="foco-benefit-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
+          <div><div class="foco-benefit-title">Real Asset Ownership</div><p class="foco-benefit-desc">Your pods are registered assets — they appreciate in value and can be resold or transferred.</p></div>
+        </div>
+        <div class="foco-benefit">
+          <div class="foco-benefit-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <div><div class="foco-benefit-title">Transparent Earnings</div><p class="foco-benefit-desc">Full monthly reports with booking data, occupancy rates and revenue breakdown.</p></div>
+        </div>
+        <div class="foco-benefit">
+          <div class="foco-benefit-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+          <div><div class="foco-benefit-title">Brand Power</div><p class="foco-benefit-desc">Your property markets under the POD STAYS brand with national reach and growing loyal guests.</p></div>
+        </div>
+        <div class="foco-benefit">
+          <div class="foco-benefit-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg></div>
+          <div><div class="foco-benefit-title">Fast Deployment</div><p class="foco-benefit-desc">German-engineered pods are pre-fabricated — setup takes 3–6 months vs 2+ years for traditional builds.</p></div>
+        </div>
+      </div>
+      <div data-reveal="fade-left">
+        <div class="comparison-box">
+          <div class="compare-col-headers">
+            <div class="compare-col-head yes">With POD STAYS FOCO</div>
+            <div class="compare-col-head no">Traditional Hotel/Resort</div>
+          </div>
+          <div class="compare-rows">
+            <div class="compare-row"><div class="compare-cell yes">Zero operations work</div><div class="compare-cell no">Daily management required</div></div>
+            <div class="compare-row"><div class="compare-cell yes">Professional hospitality team</div><div class="compare-cell no">Hire &amp; train entire staff</div></div>
+            <div class="compare-row"><div class="compare-cell yes">Centralized marketing</div><div class="compare-cell no">Build marketing from scratch</div></div>
+            <div class="compare-row"><div class="compare-cell yes">National brand equity</div><div class="compare-cell no">Unknown brand — slow start</div></div>
+            <div class="compare-row"><div class="compare-cell yes">3–6 month launch</div><div class="compare-cell no">2–4 years construction</div></div>
+            <div class="compare-row"><div class="compare-cell yes">Proven pod technology</div><div class="compare-cell no">High construction risk</div></div>
+          </div>
+        </div>
+        <div class="revenue-split-box">
+          <div class="rs-label">Monthly Revenue Split</div>
+          <div class="rs-bars">
+            <div class="rs-partner">Partner 70%</div>
+            <div class="rs-us">POD STAYS 30%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:var(--light-grey);">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-eyebrow">What Partners Say</div>
+      <h2 class="section-title">Real <em>Experiences</em></h2>
+    </div>
+    <div class="testimonials-grid" data-stagger>
+      <div class="tc">
+        <p class="tc-quote">"I invested in three Dome pods at Yercaud and haven't visited the site once in six months. The monthly bank transfers speak for themselves."</p>
+        <div class="tc-author"><div class="tc-avatar">R</div><div><div class="tc-name">Rajesh Nair</div><div class="tc-location">Franchise Partner · Yercaud</div></div></div>
+      </div>
+      <div class="tc">
+        <p class="tc-quote">"As a retired professional with land in the hills, POD STAYS gave me a way to monetize it without the stress of running a business. Best decision of my retirement."</p>
+        <div class="tc-author"><div class="tc-avatar">S</div><div><div class="tc-name">Sunita Krishnaswamy</div><div class="tc-location">Land Partner · Tamil Nadu</div></div></div>
+      </div>
+      <div class="tc">
+        <p class="tc-quote">"The 70:30 split is generous and the ROI is real. We were booking from day one. POD STAYS handles everything — I just check my statements."</p>
+        <div class="tc-author"><div class="tc-avatar">A</div><div><div class="tc-name">Arjun Mehta</div><div class="tc-location">FOCO Partner · South India</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION CTA -->
+<section class="section application-section" id="apply">
+  <div class="container" style="text-align:center;" data-reveal="fade-up">
+    <div class="section-eyebrow section-eyebrow--center">Ready to Begin?</div>
+    <h2 class="section-title section-title--center">Your <em>POD STAYS Journey</em><br>Starts Here</h2>
+    <p style="font-size:0.9375rem;color:#4a5568;margin:1rem auto 0;max-width:540px;line-height:1.8;">Take the first step toward owning a luxury pod resort that practically runs itself.</p>
+    <div class="app-steps">
+      <div class="app-step">
+        <div class="app-step-num">01</div>
+        <div class="app-step-title">Submit Interest</div>
+        <p class="app-step-desc">Fill out our brief partner form with your investment range and preferred location.</p>
+      </div>
+      <div class="app-step">
+        <div class="app-step-num">02</div>
+        <div class="app-step-title">Consultation Call</div>
+        <p class="app-step-desc">Our team will call within 48 hours to walk you through the full model.</p>
+      </div>
+      <div class="app-step">
+        <div class="app-step-num">03</div>
+        <div class="app-step-title">Sign &amp; Launch</div>
+        <p class="app-step-desc">We finalize the agreement, begin installation, and your property goes live in 3–6 months.</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn-primary">Apply to Partner</a>
+      <a href="https://wa.me/919994048360" class="btn-primary" style="background:var(--navy);" target="_blank">WhatsApp Us Now</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">POD<span>STAYS</span></div>
+        <p class="footer-desc">India's first luxury pod resort chain — redefining experiential stays worldwide.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="pod-models.html" class="footer-link">Pod Models</a></li>
+          <li><a href="locations.html" class="footer-link">Projects</a></li>
+          <li><a href="partner.html" class="footer-link">Services</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pod Models</div>
+        <ul class="footer-links">
+          <li><a href="pod-models.html" class="footer-link">All Pod Models</a></li>
+          <li><a href="models/terminal-pods.html" class="footer-link">Terminal Pods</a></li>
+          <li><a href="models/resort-pods.html" class="footer-link">Resort Pods</a></li>
+          <li><a href="models/drive-through-pods.html" class="footer-link">Drive Through Pods</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>
+          <a href="tel:+919994048360" style="color:inherit;">+91 9994048360</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Yercaud, Tamil Nadu, India</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:pod-staysretreat@gmail.com" style="color:inherit;">pod-staysretreat@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 POD STAYS. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+        <a href="#" class="footer-bottom-link">Franchise Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919994048360" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js" defer></script>
+<script src="js/navigation.js" defer></script>
+<script src="js/animation.js" defer></script>
+</body>
+</html>
